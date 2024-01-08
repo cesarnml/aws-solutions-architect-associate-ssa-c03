@@ -1,0 +1,419 @@
+# AWS Solutions Certified Architect Associate Course by Stephane Maarek
+
+- [AWS Solutions Certified Architect Associate Course by Stephane Maarek](#aws-solutions-certified-architect-associate-course-by-stephane-maarek)
+  - [Lessons](#lessons)
+  - [Notes](#notes)
+
+## Lessons
+
+- [ ] Section 01: Introduction - AWS Certified Solutions Architect Associate (13 min)
+- [ ] Section 02: Getting Started with AWS (14 min)
+- [ ] Section 03: IAM & AWS CLI (55 min)
+- [ ] Section 04: EC2 Fundamentals (100 min)
+- [ ] Section 05: EC2 Solutions Architect Level (33 min)
+- [ ] Section 06: EC2 Instance Storage (59 min)
+- [ ] Section 07: High Availability and Scalability: ELB & ASG (95 min)
+- [ ] Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache (1h 9min)
+- [ ] Section 09: Route 53 (1h 22min)
+- [ ] Section 10: Classic Solutions Architecture Discussions (45min)
+- [ ] Section 11: Amazon S3 Introduction (47 min)
+- [ ] Section 12: Advanced Amazon S3 (26 min)
+- [ ] Section 13: Amazon S3 Security (52 min)
+- [ ] Section 14: Cloudfront & AWS Global Accelerator (35 min)
+- [ ] Section 15: AWS Storage Extras (49min)
+- [ ] Section 16: Decoupling applications: SQS, SNS, Kinesis, Active MQ (1h 32min)
+- [ ] Section 17: Containers on AWS: ECS, Fargate, ECR & EKS (53 min)
+- [ ] Section 18: Serverless Overviews from a Solutions Architect Perspective (1h 18min)
+- [ ] Section 19: Serverless Solution Architecture Discussions (16min)
+- [ ] Section 20: Databases in AWS (25min)
+- [ ] Section 21: Data & Analytics (50min)
+- [ ] Section 22: Machine Learning (27min)
+- [ ] Section 23: AWS Monitoring & Audit: CloudWatch, CloudTrail & Config (1hr 13min)
+- [ ] Section 24: Identity Access Management (IAM) - Advanced (48 min)
+- [ ] Section 25: AWS Security & Encryption: KMS, SSM Parameter Store, Shield, WAF (1hr 31min)
+- [ ] Section 26: Networking - VPC (2h 38min)
+- [ ] Section 27: Disaster Recovery & Migrations (41 min)
+- [ ] Section 28: More Solution Architectures (28 min)
+- [ ] Section 29: Other Services (35 min)
+- [ ] Section 30: WhitePapers and Architectures - AWS Certified Solutions Architect Associate (14 min)
+- [ ] Section 31: Preparing for the Exam + Practice Exam (17 min)
+- [ ] Section 32: Congratulations - AWS Certified Solutions Architect Associate (8 min)
+
+- [ ] Lesson 001 - Lesson 01
+- [ ] Lesson 002
+- [ ] Lesson 003
+- [ ] Lesson 004
+- [ ] Lesson 005
+- [ ] Lesson 006
+- [ ] Lesson 007
+- [ ] Lesson 008
+- [ ] Lesson 009
+- [ ] Lesson 010
+- [ ] Lesson 011
+- [ ] Lesson 012
+- [ ] Lesson 013
+- [ ] Lesson 014
+- [ ] Lesson 015
+- [ ] Lesson 016
+- [ ] Lesson 017
+- [ ] Lesson 018
+- [ ] Lesson 019
+- [ ] Lesson 020
+- [ ] Lesson 021
+- [ ] Lesson 022
+- [ ] Lesson 023
+- [ ] Lesson 024
+- [ ] Lesson 025
+- [ ] Lesson 026
+- [ ] Lesson 027
+- [ ] Lesson 028
+- [ ] Lesson 029
+- [ ] Lesson 030
+- [ ] Lesson 031
+- [ ] Lesson 032
+- [ ] Lesson 033
+- [ ] Lesson 034
+- [ ] Lesson 035
+- [ ] Lesson 036
+- [ ] Lesson 037
+- [ ] Lesson 038
+- [ ] Lesson 039
+- [ ] Lesson 040
+- [ ] Lesson 041
+- [ ] Lesson 042
+- [ ] Lesson 043
+- [ ] Lesson 044
+- [ ] Lesson 045
+- [ ] Lesson 046
+- [ ] Lesson 047
+- [ ] Lesson 048
+- [ ] Lesson 049
+- [ ] Lesson 050
+- [ ] Lesson 051
+- [ ] Lesson 052
+- [ ] Lesson 053
+- [ ] Lesson 054
+- [ ] Lesson 055
+- [ ] Lesson 056
+- [ ] Lesson 057
+- [ ] Lesson 058
+- [ ] Lesson 059
+- [ ] Lesson 060
+- [ ] Lesson 061
+- [ ] Lesson 062
+- [ ] Lesson 063
+- [ ] Lesson 064
+- [ ] Lesson 065
+- [ ] Lesson 066
+- [ ] Lesson 067
+- [ ] Lesson 068
+- [ ] Lesson 069
+- [ ] Lesson 070
+- [ ] Lesson 071
+- [ ] Lesson 072
+- [ ] Lesson 073
+- [ ] Lesson 074
+- [ ] Lesson 075
+- [ ] Lesson 076
+- [ ] Lesson 077
+- [ ] Lesson 078
+- [ ] Lesson 079
+- [ ] Lesson 080
+- [ ] Lesson 081
+- [ ] Lesson 082
+- [ ] Lesson 083
+- [ ] Lesson 084
+- [ ] Lesson 085
+- [ ] Lesson 086
+- [ ] Lesson 087
+- [ ] Lesson 088
+- [ ] Lesson 089
+- [ ] Lesson 090
+- [ ] Lesson 091
+- [ ] Lesson 092
+- [ ] Lesson 093
+- [ ] Lesson 094
+- [ ] Lesson 095
+- [ ] Lesson 096
+- [ ] Lesson 097
+- [ ] Lesson 098
+- [ ] Lesson 099
+- [ ] Lesson 100
+- [ ] Lesson 101
+- [ ] Lesson 102
+- [ ] Lesson 103
+- [ ] Lesson 104
+- [ ] Lesson 105
+- [ ] Lesson 106
+- [ ] Lesson 107
+- [ ] Lesson 108
+- [ ] Lesson 109
+- [ ] Lesson 110
+- [ ] Lesson 111
+- [ ] Lesson 112
+- [ ] Lesson 113
+- [ ] Lesson 114
+- [ ] Lesson 115
+- [ ] Lesson 116
+- [ ] Lesson 117
+- [ ] Lesson 118
+- [ ] Lesson 119
+- [ ] Lesson 120
+- [ ] Lesson 121
+- [ ] Lesson 122
+- [ ] Lesson 123
+- [ ] Lesson 124
+- [ ] Lesson 125
+- [ ] Lesson 126
+- [ ] Lesson 127
+- [ ] Lesson 128
+- [ ] Lesson 129
+- [ ] Lesson 130
+- [ ] Lesson 131
+- [ ] Lesson 132
+- [ ] Lesson 133
+- [ ] Lesson 134
+- [ ] Lesson 135
+- [ ] Lesson 136
+- [ ] Lesson 137
+- [ ] Lesson 138
+- [ ] Lesson 139
+- [ ] Lesson 140
+- [ ] Lesson 141
+- [ ] Lesson 142
+- [ ] Lesson 143
+- [ ] Lesson 144
+- [ ] Lesson 145
+- [ ] Lesson 146
+- [ ] Lesson 147
+- [ ] Lesson 148
+- [ ] Lesson 149
+- [ ] Lesson 150
+- [ ] Lesson 151
+- [ ] Lesson 152
+- [ ] Lesson 153
+- [ ] Lesson 154
+- [ ] Lesson 155
+- [ ] Lesson 156
+- [ ] Lesson 157
+- [ ] Lesson 158
+- [ ] Lesson 159
+- [ ] Lesson 160
+- [ ] Lesson 161
+- [ ] Lesson 162
+- [ ] Lesson 163
+- [ ] Lesson 164
+- [ ] Lesson 165
+- [ ] Lesson 166
+- [ ] Lesson 167
+- [ ] Lesson 168
+- [ ] Lesson 169
+- [ ] Lesson 170
+- [ ] Lesson 171
+- [ ] Lesson 172
+- [ ] Lesson 173
+- [ ] Lesson 174
+- [ ] Lesson 175
+- [ ] Lesson 176
+- [ ] Lesson 177
+- [ ] Lesson 178
+- [ ] Lesson 179
+- [ ] Lesson 180
+- [ ] Lesson 181
+- [ ] Lesson 182
+- [ ] Lesson 183
+- [ ] Lesson 184
+- [ ] Lesson 185
+- [ ] Lesson 186
+- [ ] Lesson 187
+- [ ] Lesson 188
+- [ ] Lesson 189
+- [ ] Lesson 190
+- [ ] Lesson 191
+- [ ] Lesson 192
+- [ ] Lesson 193
+- [ ] Lesson 194
+- [ ] Lesson 195
+- [ ] Lesson 196
+- [ ] Lesson 197
+- [ ] Lesson 198
+- [ ] Lesson 199
+- [ ] Lesson 200
+- [ ] Lesson 201
+- [ ] Lesson 202
+- [ ] Lesson 203
+- [ ] Lesson 204
+- [ ] Lesson 205
+- [ ] Lesson 206
+- [ ] Lesson 207
+- [ ] Lesson 208
+- [ ] Lesson 209
+- [ ] Lesson 210
+- [ ] Lesson 211
+- [ ] Lesson 212
+- [ ] Lesson 213
+- [ ] Lesson 214
+- [ ] Lesson 215
+- [ ] Lesson 216
+- [ ] Lesson 217
+- [ ] Lesson 218
+- [ ] Lesson 219
+- [ ] Lesson 220
+- [ ] Lesson 221
+- [ ] Lesson 222
+- [ ] Lesson 223
+- [ ] Lesson 224
+- [ ] Lesson 225
+- [ ] Lesson 226
+- [ ] Lesson 227
+- [ ] Lesson 228
+- [ ] Lesson 229
+- [ ] Lesson 230
+- [ ] Lesson 231
+- [ ] Lesson 232
+- [ ] Lesson 233
+- [ ] Lesson 234
+- [ ] Lesson 235
+- [ ] Lesson 236
+- [ ] Lesson 237
+- [ ] Lesson 238
+- [ ] Lesson 239
+- [ ] Lesson 240
+- [ ] Lesson 241
+- [ ] Lesson 242
+- [ ] Lesson 243
+- [ ] Lesson 244
+- [ ] Lesson 245
+- [ ] Lesson 246
+- [ ] Lesson 247
+- [ ] Lesson 248
+- [ ] Lesson 249
+- [ ] Lesson 250
+- [ ] Lesson 251
+- [ ] Lesson 252
+- [ ] Lesson 253
+- [ ] Lesson 254
+- [ ] Lesson 255
+- [ ] Lesson 256
+- [ ] Lesson 257
+- [ ] Lesson 258
+- [ ] Lesson 259
+- [ ] Lesson 260
+- [ ] Lesson 261
+- [ ] Lesson 262
+- [ ] Lesson 263
+- [ ] Lesson 264
+- [ ] Lesson 265
+- [ ] Lesson 266
+- [ ] Lesson 267
+- [ ] Lesson 268
+- [ ] Lesson 269
+- [ ] Lesson 270
+- [ ] Lesson 271
+- [ ] Lesson 272
+- [ ] Lesson 273
+- [ ] Lesson 274
+- [ ] Lesson 275
+- [ ] Lesson 276
+- [ ] Lesson 277
+- [ ] Lesson 278
+- [ ] Lesson 279
+- [ ] Lesson 280
+- [ ] Lesson 281
+- [ ] Lesson 282
+- [ ] Lesson 283
+- [ ] Lesson 284
+- [ ] Lesson 285
+- [ ] Lesson 286
+- [ ] Lesson 287
+- [ ] Lesson 288
+- [ ] Lesson 289
+- [ ] Lesson 290
+- [ ] Lesson 291
+- [ ] Lesson 292
+- [ ] Lesson 293
+- [ ] Lesson 294
+- [ ] Lesson 295
+- [ ] Lesson 296
+- [ ] Lesson 297
+- [ ] Lesson 298
+- [ ] Lesson 299
+- [ ] Lesson 300
+- [ ] Lesson 301
+- [ ] Lesson 302
+- [ ] Lesson 303
+- [ ] Lesson 304
+- [ ] Lesson 305
+- [ ] Lesson 306
+- [ ] Lesson 307
+- [ ] Lesson 308
+- [ ] Lesson 309
+- [ ] Lesson 310
+- [ ] Lesson 311
+- [ ] Lesson 312
+- [ ] Lesson 313
+- [ ] Lesson 314
+- [ ] Lesson 315
+- [ ] Lesson 316
+- [ ] Lesson 317
+- [ ] Lesson 318
+- [ ] Lesson 319
+- [ ] Lesson 320
+- [ ] Lesson 321
+- [ ] Lesson 322
+- [ ] Lesson 323
+- [ ] Lesson 324
+- [ ] Lesson 325
+- [ ] Lesson 326
+- [ ] Lesson 327
+- [ ] Lesson 328
+- [ ] Lesson 329
+- [ ] Lesson 330
+- [ ] Lesson 331
+- [ ] Lesson 332
+- [ ] Lesson 333
+- [ ] Lesson 334
+- [ ] Lesson 335
+- [ ] Lesson 336
+- [ ] Lesson 337
+- [ ] Lesson 338
+- [ ] Lesson 339
+- [ ] Lesson 340
+- [ ] Lesson 341
+- [ ] Lesson 342
+- [ ] Lesson 343
+- [ ] Lesson 344
+- [ ] Lesson 345
+- [ ] Lesson 346
+- [ ] Lesson 347
+- [ ] Lesson 348
+- [ ] Lesson 349
+- [ ] Lesson 350
+- [ ] Lesson 351
+- [ ] Lesson 352
+- [ ] Lesson 353
+- [ ] Lesson 354
+- [ ] Lesson 355
+- [ ] Lesson 356
+- [ ] Lesson 357
+- [ ] Lesson 358
+- [ ] Lesson 359
+- [ ] Lesson 360
+- [ ] Lesson 361
+- [ ] Lesson 362
+- [ ] Lesson 363
+- [ ] Lesson 364
+- [ ] Lesson 365
+- [ ] Lesson 366
+- [ ] Lesson 367
+- [ ] Lesson 368
+- [ ] Lesson 369
+- [ ] Lesson 370
+- [ ] Lesson 371
+- [ ] Lesson 372
+- [ ] Lesson 373
+- [ ] Lesson 374
+- [ ] Lesson 375
+- [ ] Lesson 376
+
+## Notes
