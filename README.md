@@ -3,16 +3,18 @@
 - [AWS Solutions Certified Architect Associate Course by Stephane Maarek](#aws-solutions-certified-architect-associate-course-by-stephane-maarek)
   - [Lessons](#lessons)
   - [Notes](#notes)
+    - [Section 01: Introduction](#section-01-introduction)
+    - [Section 02: Getting Started with AWS](#section-02-getting-started-with-aws)
 
 ## Lessons
 
-- [ ] Section 01: Introduction - AWS Certified Solutions Architect Associate (13 min)
-  - [ ] Lesson 001 - Course Introduction
-  - [ ] Lesson 002 - Creating an AWS Account
-  - [ ] Lesson 003 - Important Message
-  - [ ] Lesson 004 - About your instructor
+- [x] ~~_Section 01: Introduction - AWS Certified Solutions Architect Associate (13 min)_~~ [2024-01-09]
+  - [x] ~~_Lesson 001 - Course Introduction_~~ [2024-01-09]
+  - [x] ~~_Lesson 002 - Creating an AWS Account_~~ [2024-01-09]
+  - [x] ~~_Lesson 003 - Important Message_~~ [2024-01-09]
+  - [x] ~~_Lesson 004 - About your instructor_~~ [2024-01-09]
 - [ ] Section 02: Getting Started with AWS (14 min)
-  - [ ] Lesson 005 - AWS Cloud Overview - Regions & AZ
+  - [x] ~~_Lesson 005 - AWS Cloud Overview - Regions & AZ_~~ [2024-01-09]
   - [ ] Lesson 006 - Tour of the AWS Console & Services in AWS
   - [ ] Lesson 007 - About the UI changes in the course
 - [ ] Section 03: IAM & AWS CLI (55 min)
@@ -416,3 +418,11 @@
   - [ ] Lesson 376 - Thank you!
 
 ## Notes
+
+### Section 01: Introduction
+
+- No notes
+
+### Section 02: Getting Started with AWS
+
+- AWS is the biggest Cloud Provider
