@@ -5,6 +5,7 @@
   - [Notes](#notes)
     - [Section 01: Introduction](#section-01-introduction)
     - [Section 02: Getting Started with AWS](#section-02-getting-started-with-aws)
+    - [Section 03: IAM](#section-03-iam)
 
 ## Lessons
 
@@ -17,25 +18,25 @@
   - [x] ~~_Lesson 005 - AWS Cloud Overview - Regions & AZ_~~ [2024-01-09]
   - [x] ~~_Lesson 006 - Tour of the AWS Console & Services in AWS_~~ [2024-01-09]
   - [x] ~~_Lesson 007 - About the UI changes in the course_~~ [2024-01-09]
-- [ ] Section 03: IAM & AWS CLI (55 min)
-  - [ ] Lesson 008 - IAM Introductions: Users, Groups, Policies
-  - [ ] Lesson 009 - IAM Users & Groups Hands On
-  - [ ] Lesson 010 - IAM Policies
-  - [ ] Lesson 011 - IAM Policies Hands On
-  - [ ] Lesson 012 - IAM MFA Overview
-  - [ ] Lesson 013 - IAM MFA Hands On
-  - [ ] Lesson 014 - AWS Access Keys, CLI, and SDK
-  - [ ] Lesson 015 - AWS CLI Setup on Windows
-  - [ ] Lesson 016 - AWS CLI Setup on Mac OS X
-  - [ ] Lesson 017 - AWS CLI Setup on Linux
-  - [ ] Lesson 018 - AWS CLI Hands ONn
-  - [ ] Lesson 019 - AWS CloudShell
-  - [ ] Lesson 020 - IAM Roles for AWS Services
-  - [ ] Lesson 021 - IAM Roles Hands On
-  - [ ] Lesson 022 - IAM Security Tools
-  - [ ] Lesson 023 - IAM Security Tools Hands On
-  - [ ] Lesson 024 - IAM Best Practices
-  - [ ] Lesson 025 - IAM Summary
+- [x] ~~_Section 03: IAM & AWS CLI (55 min)_~~ [2024-01-09]
+  - [x] ~~_Lesson 008 - IAM Introductions: Users, Groups, Policies_~~ [2024-01-09]
+  - [x] ~~_Lesson 009 - IAM Users & Groups Hands On_~~ [2024-01-09]
+  - [x] ~~_Lesson 010 - IAM Policies_~~ [2024-01-09]
+  - [x] ~~_Lesson 011 - IAM Policies Hands On_~~ [2024-01-09]
+  - [x] ~~_Lesson 012 - IAM MFA Overview_~~ [2024-01-09]
+  - [x] ~~_Lesson 013 - IAM MFA Hands On_~~ [2024-01-09]
+  - [x] ~~_Lesson 014 - AWS Access Keys, CLI, and SDK_~~ [2024-01-09]
+  - [x] ~~_Lesson 015 - AWS CLI Setup on Windows_~~ [2024-01-09]
+  - [x] ~~_Lesson 016 - AWS CLI Setup on Mac OS X_~~ [2024-01-09]
+  - [x] ~~_Lesson 017 - AWS CLI Setup on Linux_~~ [2024-01-09]
+  - [x] ~~_Lesson 018 - AWS CLI Hands ONn_~~ [2024-01-09]
+  - [x] ~~_Lesson 019 - AWS CloudShell_~~ [2024-01-09]
+  - [x] ~~_Lesson 020 - IAM Roles for AWS Services_~~ [2024-01-09]
+  - [x] ~~_Lesson 021 - IAM Roles Hands On_~~ [2024-01-09]
+  - [x] ~~_Lesson 022 - IAM Security Tools_~~ [2024-01-09]
+  - [x] ~~_Lesson 023 - IAM Security Tools Hands On_~~ [2024-01-09]
+  - [x] ~~_Lesson 024 - IAM Best Practices_~~ [2024-01-09]
+  - [x] ~~_Lesson 025 - IAM Summary_~~ [2024-01-09]
 - [ ] Section 04: EC2 Fundamentals (100 min)
   - [ ] Lesson 026 - AWS Budget Setup
   - [ ] Lesson 027 - EC2 Basics
@@ -440,3 +441,26 @@
   - Ultra-low latency networking
 - AWS Points of Presence (Edge Locations)
   - 216+ PoP
+
+### Section 03: IAM
+
+- IAM Groups only contain IAM Users
+- IAM Policy ... JSON document
+  - Define permission for users
+  - Least Privilege
+- Best Practices -- Create an Admin IAM Group (AdministratorAccess) to replace root user for day-to-day activities
+- IAM Password Policy - behave bitch (cycle passwords)
+- MFA
+  - Virtual MFA device
+  - U2F Security Key
+  - Hardware Key Fob MFA Device
+  - Hardware Key Fob MFA Device for AWS GovCloud
+- 3 Ways to Access AWS:
+  - AWS Management Console
+  - AWS CLI
+  - AWS SDK
+- IAM Roles used to assign permission to AWS Services
+- IAM Credentials Report
+  - account-level, list all account users and credential status
+- IAM Access Advisor
+  - user-level, shows service permissions on user and when last used (least-privilege)
