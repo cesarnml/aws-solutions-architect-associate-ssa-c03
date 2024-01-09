@@ -13,10 +13,10 @@
   - [x] ~~_Lesson 002 - Creating an AWS Account_~~ [2024-01-09]
   - [x] ~~_Lesson 003 - Important Message_~~ [2024-01-09]
   - [x] ~~_Lesson 004 - About your instructor_~~ [2024-01-09]
-- [ ] Section 02: Getting Started with AWS (14 min)
+- [x] ~~_Section 02: Getting Started with AWS (14 min)_~~ [2024-01-09]
   - [x] ~~_Lesson 005 - AWS Cloud Overview - Regions & AZ_~~ [2024-01-09]
-  - [ ] Lesson 006 - Tour of the AWS Console & Services in AWS
-  - [ ] Lesson 007 - About the UI changes in the course
+  - [x] ~~_Lesson 006 - Tour of the AWS Console & Services in AWS_~~ [2024-01-09]
+  - [x] ~~_Lesson 007 - About the UI changes in the course_~~ [2024-01-09]
 - [ ] Section 03: IAM & AWS CLI (55 min)
   - [ ] Lesson 008 - IAM Introductions: Users, Groups, Policies
   - [ ] Lesson 009 - IAM Users & Groups Hands On
@@ -426,3 +426,17 @@
 ### Section 02: Getting Started with AWS
 
 - AWS is the biggest Cloud Provider
+- AWS Regions
+  - cluster of data centers
+  - Most AWS Services are region-scoped
+- How to select an AWS Region
+  - Compliance
+  - Proximity
+  - Available services
+  - Pricing
+- AWS Availability Zones
+  - Minimum of 2 AZ within each AWS Region (usually 3)
+  - Discrete data centers, redundant power, networking, and connectivity
+  - Ultra-low latency networking
+- AWS Points of Presence (Edge Locations)
+  - 216+ PoP
