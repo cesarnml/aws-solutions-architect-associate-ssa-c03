@@ -6,6 +6,7 @@
     - [Section 01: Introduction](#section-01-introduction)
     - [Section 02: Getting Started with AWS](#section-02-getting-started-with-aws)
     - [Section 03: IAM](#section-03-iam)
+    - [Section 04: EC2 Fundamentals](#section-04-ec2-fundamentals)
 
 ## Lessons
 
@@ -37,22 +38,22 @@
   - [x] ~~_Lesson 023 - IAM Security Tools Hands On_~~ [2024-01-09]
   - [x] ~~_Lesson 024 - IAM Best Practices_~~ [2024-01-09]
   - [x] ~~_Lesson 025 - IAM Summary_~~ [2024-01-09]
-- [ ] Section 04: EC2 Fundamentals (100 min)
-  - [ ] Lesson 026 - AWS Budget Setup
-  - [ ] Lesson 027 - EC2 Basics
-  - [ ] Lesson 028 - Create an EC2 Instance with EC2 User Data to have a Website Hands On
-  - [ ] Lesson 029 - EC2 Instance Types Basics
-  - [ ] Lesson 030 - Security Groups & Classic Ports Overview
-  - [ ] Lesson 031 - Security Groups Hands On
-  - [ ] Lesson 032 - SSH Overview
-  - [ ] Lesson 033 - How to SSH using Linux or Mac
-  - [ ] Lesson 034 - How to SSH using Windows
-  - [ ] Lesson 035 - How to SSH using Windows 10
-  - [ ] Lesson 036 - EC2 Instance Connect
-  - [ ] Lesson 037 - EC2 Instance Roles Demo
-  - [ ] Lesson 038 - EC2 Instance Purchasing Options
-  - [ ] Lesson 039 - Spot Instances & Spot Fleet
-  - [ ] Lesson 040 - EC2 Instances Launch Types Hands On
+- [x] ~~_Section 04: EC2 Fundamentals (100 min)_~~ [2024-01-10]
+  - [x] ~~_Lesson 026 - AWS Budget Setup_~~ [2024-01-09]
+  - [x] ~~_Lesson 027 - EC2 Basics_~~ [2024-01-09]
+  - [x] ~~_Lesson 028 - Create an EC2 Instance with EC2 User Data to have a Website Hands On_~~ [2024-01-09]
+  - [x] ~~_Lesson 029 - EC2 Instance Types Basics_~~ [2024-01-09]
+  - [x] ~~_Lesson 030 - Security Groups & Classic Ports Overview_~~ [2024-01-10]
+  - [x] ~~_Lesson 031 - Security Groups Hands On_~~ [2024-01-10]
+  - [x] ~~_Lesson 032 - SSH Overview_~~ [2024-01-10]
+  - [x] ~~_Lesson 033 - How to SSH using Linux or Mac_~~ [2024-01-10]
+  - [x] ~~_Lesson 034 - How to SSH using Windows_~~ [2024-01-10]
+  - [x] ~~_Lesson 035 - How to SSH using Windows 10_~~ [2024-01-10]
+  - [x] ~~_Lesson 036 - EC2 Instance Connect_~~ [2024-01-10]
+  - [x] ~~_Lesson 037 - EC2 Instance Roles Demo_~~ [2024-01-10]
+  - [x] ~~_Lesson 038 - EC2 Instance Purchasing Options_~~ [2024-01-10]
+  - [x] ~~_Lesson 039 - Spot Instances & Spot Fleet_~~ [2024-01-10]
+  - [x] ~~_Lesson 040 - EC2 Instances Launch Types Hands On_~~ [2024-01-10]
 - [ ] Section 05: EC2 Solutions Architect Level (33 min)
   - [ ] Lesson 041 - Private vs Public vs Elastic IP
   - [ ] Lesson 042 - Private vs Public vs Elastic IP Hands On
@@ -464,3 +465,86 @@
   - account-level, list all account users and credential status
 - IAM Access Advisor
   - user-level, shows service permissions on user and when last used (least-privilege)
+
+### Section 04: EC2 Fundamentals
+
+- AWS Budget - create alarms triggered when budget threshold metrics are exceeded
+- EC2 - Elastic Compute Cloud - Infrastructure as a Service
+  - Storing data on virtual drives (EBS)
+  - Distribute load using (ELB)
+  - Scaling the services using auto-scaling group (ASG)
+- EC2 User Data
+  - Script used to bootstrap EC2 instance, only run once, first start
+  - Used to automate boot tasks:
+    - Installing updates
+    - Installing software
+    - Downloading common files from internet
+    - Anything really
+  - Runs as root user
+- Security Group
+  - set of firewall rules that control traffic for your instance
+  - work on instance-level
+  - contain only `allow` rules
+  - Can reference by `IP` or by `Security Group`
+  - SG regulate:
+    - Access to Ports
+    - Authorized IP ranges (IPv4 & IPv6)
+    - Control `inbound` traffic to instance
+    - Control `outbound` traffic from instance to "other"s
+      - By default
+        - `all outbound traffic is allowed`
+        - `all inbound traffic is blocked`
+  - Can be attached to multiple instances
+  - Locked to Region/VPC combination
+  - Request is intercepted before EC2 instance receives it
+  - "time out" -> request not allowed by SG
+  - "connection refused" -> application issue
+- Classic PORTS to know
+  - `22` -> SSH
+  - `21` -> FTP
+  - `22` -> SFTP
+  - `80` -> HTTP
+  - `442` -> HTTPS
+  - `3389` -> RDP (Remote Desktop Protocol)
+- Instance Types (7)
+  - General Purpose
+  - Compute Optimized
+  - Memory Optimized
+  - Accelerated Computing
+  - Storage Optimized
+  - Instance Features
+  - Measuring Instance Performance
+- SSH
+  - `ssh -i KEY.pem ec2-user@PUBLIC_IP`
+  - `chmod 0400 KEY.pem`
+- EC2 Instance Connect
+  - Browser-based terminal to connect to EC2 Instance via AWS Management Console
+  - Attach IAM Roles to EC2 Instances
+    - `DON'T RUN "aws configure" within an instance terminal!!!`
+- EC2 instances Purchasing Options
+  - On-Demand
+    - short-term, un-interrupted workloads
+  - Reserved (1 & 3 years)
+    - Reserved Instances (long workloads)
+      - `Instance Type`, `Region`, `Tenancy`, `OS`
+      - `Reserved Instance Scope` - `Regional` or `Zonal`
+    - Convertible Reserved Instances - (long workloads with flexible instances)
+      - Can change specs
+  - Savings Plans (1 & 3 years) - commitments to an amount of usage, long workload
+    - Commit to dollar/hour for 1 & 3 years
+    - Locked to `instance family` and `region`
+  - Spot Instances - short workload, cheap, can be interrupted
+    - Jobs that are resilient to failure:
+      - Batch jobs
+      - Data analysis
+      - Image processing
+      - Distributed workloads
+  - Dedicated Host - book physical host
+    - `compliance requirements`, `server-bound software licenses`
+  - Dedicated Instances - No other customer will share your hardware
+    - No control over placement of hardware
+  - Capacity Reservations - Reserve capacity in specific AZ for any duration
+    - Reserve On-Demand in a specific AZ
+    - No time commitment, no billing discount
+    - Charge whether you use it or not
+    - `short-term`, `uninterrupted workloads` in a `specific AZ`
