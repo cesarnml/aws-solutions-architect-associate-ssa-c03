@@ -58,8 +58,8 @@
 - [ ] Section 05: EC2 Solutions Architect Level (33 min)
   - [x] ~~_Lesson 041 - Private vs Public vs Elastic IP_~~ [2024-01-11]
   - [x] ~~_Lesson 042 - Private vs Public vs Elastic IP Hands On_~~ [2024-01-11]
-  - [ ] Lesson 043 - EC2 Placement Groups
-  - [ ] Lesson 044 - EC2 Placement Groups - Hands On
+  - [x] ~~_Lesson 043 - EC2 Placement Groups_~~ [2024-01-11]
+  - [x] ~~_Lesson 044 - EC2 Placement Groups - Hands On_~~ [2024-01-11]
   - [ ] Lesson 045 - Elastic Network Interfaces (ENI) Overview
   - [ ] Lesson 046 - Elastic Network Interfaces (ENI) Hands On
   - [ ] Lesson 047 - EC2 Hibernate
@@ -563,4 +563,19 @@
   - not a good architecture pattern
   - in theory, it allows for a failed instance to be remapped as a disaster recovery strategy
   - ELB is a better approach
--
+- EC2 Placement Groups
+  - Cluster - low-latency group in single AZ
+    - 10 Gbps network, low-latency, same rack, same AZ, high risk
+  - Spread - max 7 instances/group/AZ - critical applications
+    - minimize failure risk (all instances on different hardware)
+    - span multiple AZ
+    - maximize high availability
+  - Partition - 100s EC2 instances/group (allows Hadoop, Kafka, Cassandra)
+    - Up to 7 partitions per AZ
+    - Multiple AZs in same Region
+    - 100s of EC2 instances
+    - Partitions on separate racks
+    - Big Data Applications (HDFS, HBase, Cassandra, Kafka)
+- Elastic Network Interfaces (ENI)
+  - Virtual Network Card
+  -
