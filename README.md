@@ -586,3 +586,5 @@
     - MAC address
   - Bound to a specific AZ
   - Create ENI independently of EC2 instance and attachable on the fly (use case failover)
+- EC2 Hibernate
+  -
