@@ -7,6 +7,7 @@
     - [Section 02: Getting Started with AWS](#section-02-getting-started-with-aws)
     - [Section 03: IAM](#section-03-iam)
     - [Section 04: EC2 Fundamentals](#section-04-ec2-fundamentals)
+    - [Section 05: EC2 Solutions Architect Level](#section-05-ec2-solutions-architect-level)
 
 ## Lessons
 
@@ -55,8 +56,8 @@
   - [x] ~~_Lesson 039 - Spot Instances & Spot Fleet_~~ [2024-01-10]
   - [x] ~~_Lesson 040 - EC2 Instances Launch Types Hands On_~~ [2024-01-10]
 - [ ] Section 05: EC2 Solutions Architect Level (33 min)
-  - [ ] Lesson 041 - Private vs Public vs Elastic IP
-  - [ ] Lesson 042 - Private vs Public vs Elastic IP Hands On
+  - [x] ~~_Lesson 041 - Private vs Public vs Elastic IP_~~ [2024-01-11]
+  - [x] ~~_Lesson 042 - Private vs Public vs Elastic IP Hands On_~~ [2024-01-11]
   - [ ] Lesson 043 - EC2 Placement Groups
   - [ ] Lesson 044 - EC2 Placement Groups - Hands On
   - [ ] Lesson 045 - Elastic Network Interfaces (ENI) Overview
@@ -539,6 +540,7 @@
       - Data analysis
       - Image processing
       - Distributed workloads
+    - `max spot price`, `2 minutes`
   - Dedicated Host - book physical host
     - `compliance requirements`, `server-bound software licenses`
   - Dedicated Instances - No other customer will share your hardware
@@ -548,3 +550,17 @@
     - No time commitment, no billing discount
     - Charge whether you use it or not
     - `short-term`, `uninterrupted workloads` in a `specific AZ`
+- Spot Fleet
+  - `lowest price` - cost optimization, short workloads
+  - `diversified` - great for availability, long workloads
+  - `capacityOptimized` - optimal capacity
+
+### Section 05: EC2 Solutions Architect Level
+
+- Elastic IP
+  - a Public IP (IPv4) that can be attached to an instance to retain a fixed IP address
+  - limited to 5 Elastic IP
+  - not a good architecture pattern
+  - in theory, it allows for a failed instance to be remapped as a disaster recovery strategy
+  - ELB is a better approach
+-
