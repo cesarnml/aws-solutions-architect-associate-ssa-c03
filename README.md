@@ -60,8 +60,8 @@
   - [x] ~~_Lesson 042 - Private vs Public vs Elastic IP Hands On_~~ [2024-01-11]
   - [x] ~~_Lesson 043 - EC2 Placement Groups_~~ [2024-01-11]
   - [x] ~~_Lesson 044 - EC2 Placement Groups - Hands On_~~ [2024-01-11]
-  - [ ] Lesson 045 - Elastic Network Interfaces (ENI) Overview
-  - [ ] Lesson 046 - Elastic Network Interfaces (ENI) Hands On
+  - [x] ~~_Lesson 045 - Elastic Network Interfaces (ENI) Overview_~~ [2024-01-11]
+  - [x] ~~_Lesson 046 - Elastic Network Interfaces (ENI) Hands On_~~ [2024-01-11]
   - [ ] Lesson 047 - EC2 Hibernate
   - [ ] Lesson 048 - EC2 Hibernate Hands On
 - [ ] Section 06: EC2 Instance Storage (59 min)
@@ -578,4 +578,11 @@
     - Big Data Applications (HDFS, HBase, Cassandra, Kafka)
 - Elastic Network Interfaces (ENI)
   - Virtual Network Card
-  -
+  - Can have:
+    - 1 Primary (eth0) private IPv4, one or more secondary (eth1) IPv4
+    - 1 Public IPv4
+    - 1 Elastic IP/private-IPv4
+    - 1 or more SG
+    - MAC address
+  - Bound to a specific AZ
+  - Create ENI independently of EC2 instance and attachable on the fly (use case failover)
