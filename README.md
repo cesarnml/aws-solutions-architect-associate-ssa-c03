@@ -55,15 +55,15 @@
   - [x] ~~_Lesson 038 - EC2 Instance Purchasing Options_~~ [2024-01-10]
   - [x] ~~_Lesson 039 - Spot Instances & Spot Fleet_~~ [2024-01-10]
   - [x] ~~_Lesson 040 - EC2 Instances Launch Types Hands On_~~ [2024-01-10]
-- [ ] Section 05: EC2 Solutions Architect Level (33 min)
+- [x] ~~_Section 05: EC2 Solutions Architect Level (33 min)_~~ [2024-01-12]
   - [x] ~~_Lesson 041 - Private vs Public vs Elastic IP_~~ [2024-01-11]
   - [x] ~~_Lesson 042 - Private vs Public vs Elastic IP Hands On_~~ [2024-01-11]
   - [x] ~~_Lesson 043 - EC2 Placement Groups_~~ [2024-01-11]
   - [x] ~~_Lesson 044 - EC2 Placement Groups - Hands On_~~ [2024-01-11]
   - [x] ~~_Lesson 045 - Elastic Network Interfaces (ENI) Overview_~~ [2024-01-11]
   - [x] ~~_Lesson 046 - Elastic Network Interfaces (ENI) Hands On_~~ [2024-01-11]
-  - [ ] Lesson 047 - EC2 Hibernate
-  - [ ] Lesson 048 - EC2 Hibernate Hands On
+  - [x] ~~_Lesson 047 - EC2 Hibernate_~~ [2024-01-12]
+  - [x] ~~_Lesson 048 - EC2 Hibernate Hands On_~~ [2024-01-12]
 - [ ] Section 06: EC2 Instance Storage (59 min)
   - [ ] Lesson 049 - EBS Overview
   - [ ] Lesson 050 - EBS Hands On
@@ -587,4 +587,5 @@
   - Bound to a specific AZ
   - Create ENI independently of EC2 instance and attachable on the fly (use case failover)
 - EC2 Hibernate
-  -
+  - Stop, Terminate, Hibernate
+  - EBS root volume must be incremented and EBS volume > RAM size; 60 day limit
