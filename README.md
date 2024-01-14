@@ -8,6 +8,7 @@
     - [Section 03: IAM](#section-03-iam)
     - [Section 04: EC2 Fundamentals](#section-04-ec2-fundamentals)
     - [Section 05: EC2 Solutions Architect Level](#section-05-ec2-solutions-architect-level)
+    - [Section 06: EC2 Instance Storage](#section-06-ec2-instance-storage)
 
 ## Lessons
 
@@ -65,10 +66,10 @@
   - [x] ~~_Lesson 047 - EC2 Hibernate_~~ [2024-01-12]
   - [x] ~~_Lesson 048 - EC2 Hibernate Hands On_~~ [2024-01-12]
 - [ ] Section 06: EC2 Instance Storage (59 min)
-  - [ ] Lesson 049 - EBS Overview
-  - [ ] Lesson 050 - EBS Hands On
-  - [ ] Lesson 051 - EBS Snapshots
-  - [ ] Lesson 052 - EBS Snapshots Hands On
+  - [x] ~~_Lesson 049 - EBS Overview_~~ [2024-01-12]
+  - [x] ~~_Lesson 050 - EBS Hands On_~~ [2024-01-12]
+  - [x] ~~_Lesson 051 - EBS Snapshots_~~ [2024-01-12]
+  - [x] ~~_Lesson 052 - EBS Snapshots Hands On_~~ [2024-01-12]
   - [ ] Lesson 053 - AMI Overview
   - [ ] Lesson 054 - AMI Hands On
   - [ ] Lesson 055 - EC2 Instance Store
@@ -589,3 +590,34 @@
 - EC2 Hibernate
   - Stop, Terminate, Hibernate
   - EBS root volume must be incremented and EBS volume > RAM size; 60 day limit
+
+### Section 06: EC2 Instance Storage
+
+- EBS (Elastic Block Store) Volume
+  - network drive - can persist data after termination
+  - `multi-attached` to mount EBS onto multiple EC2 instances
+  - bound to specific AZ
+- EBS snapshots
+  - backup of EBS volume
+  - can copy snapshots onto other AZ/Regions
+- EBS Snapshot Archive
+  - 24 - 72 hours to restore, 75% cheaper
+- Recycle Bin for EBS Snapshots
+  - To recover EBS Snapshots after accidental deletion
+  - 1 day to 1 year
+- Fast Snapshot Restore (FSR)
+  - expensive but quick; useful for big volumes
+- AMI (Amazon Machine Image)
+  - customization of an EC2 instance
+  - allows for faster boot (pre-packaged software packages/setup)
+  - Can come from three sources:
+    - Public AMI
+    - Custom AMI (you maintain it)
+    - AWS Marketplace AMI
+- EC2 Instance Store
+  - High-performance hardware disk
+  - Storage is ephemeral
+  - buffer/cache/scratch data/temporary content
+  - backups and replication are your responsibility
+- EBS Volume Types (6 Types)
+  -
