@@ -65,7 +65,7 @@
   - [x] ~~_Lesson 046 - Elastic Network Interfaces (ENI) Hands On_~~ [2024-01-11]
   - [x] ~~_Lesson 047 - EC2 Hibernate_~~ [2024-01-12]
   - [x] ~~_Lesson 048 - EC2 Hibernate Hands On_~~ [2024-01-12]
-- [ ] Section 06: EC2 Instance Storage (59 min)
+- [x] ~~_Section 06: EC2 Instance Storage (59 min)_~~ [2024-01-15]
   - [x] ~~_Lesson 049 - EBS Overview_~~ [2024-01-12]
   - [x] ~~_Lesson 050 - EBS Hands On_~~ [2024-01-12]
   - [x] ~~_Lesson 051 - EBS Snapshots_~~ [2024-01-12]
@@ -73,13 +73,13 @@
   - [x] ~~_Lesson 053 - AMI Overview_~~ [2024-01-15]
   - [x] ~~_Lesson 054 - AMI Hands On_~~ [2024-01-15]
   - [x] ~~_Lesson 055 - EC2 Instance Store_~~ [2024-01-15]
-  - [ ] Lesson 056 - EBS Volume Types
-  - [ ] Lesson 057 - EBS Multi-Attach
-  - [ ] Lesson 058 - EBS Encryption
-  - [ ] Lesson 059 - Amazon EFS
-  - [ ] Lesson 060 - Amazon EFS Hands On
-  - [ ] Lesson 061 - EFS vs EBS
-  - [ ] Lesson 062 - EBS & EFS Section Cleanup
+  - [x] ~~_Lesson 056 - EBS Volume Types_~~ [2024-01-15]
+  - [x] ~~_Lesson 057 - EBS Multi-Attach_~~ [2024-01-15]
+  - [x] ~~_Lesson 058 - EBS Encryption_~~ [2024-01-15]
+  - [x] ~~_Lesson 059 - Amazon EFS_~~ [2024-01-15]
+  - [x] ~~_Lesson 060 - Amazon EFS Hands On_~~ [2024-01-15]
+  - [x] ~~_Lesson 061 - EFS vs EBS_~~ [2024-01-15]
+  - [x] ~~_Lesson 062 - EBS & EFS Section Cleanup_~~ [2024-01-15]
 - [ ] Section 07: High Availability and Scalability: ELB & ASG (95 min)
   - [ ] Lesson 063 - High Availability and Scalability
   - [ ] Lesson 064 - Elastic Load Balancing (ELB) Overview
@@ -619,4 +619,42 @@
   - Storage is ephemeral
   - buffer/cache/scratch data/temporary content
   - backups and replication are your responsibility
+  - `i3`
 - EBS Volume Types (6 Types)
+  - `gp2/gp3 (SSD)` - `G`eneral `p`urpose, balances price/performance - BOOT
+  - `io1/io2 (SSD)` - Provisioned IOPS (PIOPS SSD) Highest performance, mission-critical low-lat, high-thru - BOOT - More than 16,000 IOPS, Great for databases - 4GB - 16 TB
+    - MAX 64,000 IOPS for Nitro EC2, otherwise 32,000
+    - io2 more durability and more IOPS per GB wrt io1
+    - io2 Block Express - sub-millisecond latency; MAX IOPS 256,000 IOPS:GB 1,000,1
+    - `supports EBS multi-attach`!!!
+  - `st1 (HDD)` - Low cost volume, frequent access and high throughput
+    - Max throughput 500 MiB/s to 500
+  - `sc1 (HDD)` - Low cost, less frequent access
+  - For `gp3`, IOPS and volume are independent; `gp2` 3 IOPS per GB - linked
+- EBS Multi-Attach (`io1/io2 family`)
+  - Attach multiple EC2 instances in the same AZ
+  - Up to 16 EC2 instances at a time
+  - Must use a File System that is cluster-aware
+  - higher application availability
+- EBS Encryption
+  - Data at rest is encrypted
+  - In-flight data between instance and volume is encrypted
+  - Snapshots are encrypted
+  - Leverages keys from KMS (AES-256)
+- Amazon EFS - Elastic File System
+  - Manged NFS can be mounted on many EC2
+  - Works across multi-AZ
+  - Highly available, scalable, expensive (3x gp2), pay per use
+  - uses NFSv4.1 protocol
+  - Compatible with Linux based AMI (not Windows)
+  - POSIX file system
+  - SCALE
+    - 1000x concurrent attachments, 10GB+/s throughput
+    - Petabyte scale, automatically
+  - PERFORMANCE
+    - General Purpose (low-latency) or Max I/O (higher latency)
+  - THROUGHPUT
+    - Bursting (1 TB = 50 MB/s + 100 MB/s)
+    - Provisioned - throughput independent of size
+  - Storage Tiers - Standard and Infrequent access (EFS Standard - EFS IA)
+  - Availability - Standard: Multi-AZ or One Zone (EFS One Zone-IA)
