@@ -9,6 +9,7 @@
     - [Section 04: EC2 Fundamentals](#section-04-ec2-fundamentals)
     - [Section 05: EC2 Solutions Architect Level](#section-05-ec2-solutions-architect-level)
     - [Section 06: EC2 Instance Storage](#section-06-ec2-instance-storage)
+    - [Section 07: High Availability and Scalability](#section-07-high-availability-and-scalability)
 
 ## Lessons
 
@@ -81,8 +82,8 @@
   - [x] ~~_Lesson 061 - EFS vs EBS_~~ [2024-01-15]
   - [x] ~~_Lesson 062 - EBS & EFS Section Cleanup_~~ [2024-01-15]
 - [ ] Section 07: High Availability and Scalability: ELB & ASG (95 min)
-  - [ ] Lesson 063 - High Availability and Scalability
-  - [ ] Lesson 064 - Elastic Load Balancing (ELB) Overview
+  - [x] ~~_Lesson 063 - High Availability and Scalability_~~ [2024-01-15]
+  - [x] ~~_Lesson 064 - Elastic Load Balancing (ELB) Overview_~~ [2024-01-15]
   - [ ] Lesson 065 - Application Load Balancer (ALB)
   - [ ] Lesson 066 - Application Load Balancer (ALB) Hands On - Part 1
   - [ ] Lesson 067 - Application Load Balancer (ALB) Hands On - Part 2
@@ -658,3 +659,24 @@
     - Provisioned - throughput independent of size
   - Storage Tiers - Standard and Infrequent access (EFS Standard - EFS IA)
   - Availability - Standard: Multi-AZ or One Zone (EFS One Zone-IA)
+
+### Section 07: High Availability and Scalability
+
+- Scalability app/system can adapt to increases/decreases in load
+- Vertical => more power
+- Horizontal (elasticity) => more servers
+- Elastic Load Balancer (ELB) - managed load balancer
+  - AWS guarantees it will work, upgrades, maintenance, high availability
+  - Integrated with EC2, EC2 Auto Scaling Groups, Amazon ECS, AWS Certificate Manager, CloudWatch, Route53, AWS WAF, AWS Global Accelerator
+  - Health Checks
+    - port: 4567 and `/health` endpoint
+  - 4 Types of Load Balancers
+    - Classic Load Balancer (CLB) (DEPRECATED)
+      - HTTP, HTTPS, TCP, SSL (secure TCP)
+    - Application Load Balancer (ALB)
+      - Layer 7 (HTTP/HTTPS)
+      - HTTP, HTTPS, WebSocket
+    - Network Load Balancer (NLB)
+      - TCP, TLC (secure TCP), UDP
+    - Gateway Load Balancer (GWLB)
+    - Layer 3, IP Protocol
