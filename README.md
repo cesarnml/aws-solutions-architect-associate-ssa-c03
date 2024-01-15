@@ -85,7 +85,7 @@
   - [x] ~~_Lesson 063 - High Availability and Scalability_~~ [2024-01-15]
   - [x] ~~_Lesson 064 - Elastic Load Balancing (ELB) Overview_~~ [2024-01-15]
   - [x] ~~_Lesson 065 - Application Load Balancer (ALB)_~~ [2024-01-15]
-  - [ ] Lesson 066 - Application Load Balancer (ALB) Hands On - Part 1
+  - [x] ~~_Lesson 066 - Application Load Balancer (ALB) Hands On - Part 1_~~ [2024-01-15]
   - [ ] Lesson 067 - Application Load Balancer (ALB) Hands On - Part 2
   - [ ] Lesson 068 - Network Load Balancer (NLB)
   - [ ] Lesson 069 - Network Load Balancer (NLB) Hands On
