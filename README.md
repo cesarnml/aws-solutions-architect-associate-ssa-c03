@@ -86,7 +86,7 @@
   - [x] ~~_Lesson 064 - Elastic Load Balancing (ELB) Overview_~~ [2024-01-15]
   - [x] ~~_Lesson 065 - Application Load Balancer (ALB)_~~ [2024-01-15]
   - [x] ~~_Lesson 066 - Application Load Balancer (ALB) Hands On - Part 1_~~ [2024-01-15]
-  - [ ] Lesson 067 - Application Load Balancer (ALB) Hands On - Part 2
+  - [x] ~~_Lesson 067 - Application Load Balancer (ALB) Hands On - Part 2_~~ [2024-01-15]c
   - [ ] Lesson 068 - Network Load Balancer (NLB)
   - [ ] Lesson 069 - Network Load Balancer (NLB) Hands On
   - [ ] Lesson 070 - Gateway Load Balancer (GWLB)
@@ -686,5 +686,6 @@
       - EC2 Instances, ECS tasks, Lambda functions (HTTP request to JSON event), IP addresses (private IP), can route to multiple TG, Health Checks at TG level
     - Network Load Balancer (NLB)
       - TCP, TLC (secure TCP), UDP
+      - Layer 4
     - Gateway Load Balancer (GWLB)
     - Layer 3, IP Protocol
