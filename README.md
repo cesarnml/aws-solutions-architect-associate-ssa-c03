@@ -87,9 +87,9 @@
   - [x] ~~_Lesson 065 - Application Load Balancer (ALB)_~~ [2024-01-15]
   - [x] ~~_Lesson 066 - Application Load Balancer (ALB) Hands On - Part 1_~~ [2024-01-15]
   - [x] ~~_Lesson 067 - Application Load Balancer (ALB) Hands On - Part 2_~~ [2024-01-15]c
-  - [ ] Lesson 068 - Network Load Balancer (NLB)
-  - [ ] Lesson 069 - Network Load Balancer (NLB) Hands On
-  - [ ] Lesson 070 - Gateway Load Balancer (GWLB)
+  - [x] ~~_Lesson 068 - Network Load Balancer (NLB)_~~ [2024-01-15]
+  - [x] ~~_Lesson 069 - Network Load Balancer (NLB) Hands On_~~ [2024-01-15]
+  - [x] ~~_Lesson 070 - Gateway Load Balancer (GWLB)_~~ [2024-01-15]
   - [ ] Lesson 071 - Elastic Load Balancer - Sticky Sessions
   - [ ] Lesson 072 - Elastic Load Balancer - Cross Zone Load Balancing
   - [ ] Lesson 073 - Elastic Load Balancer - SSL Certificates
@@ -674,6 +674,7 @@
     - Classic Load Balancer (CLB) (DEPRECATED)
       - HTTP, HTTPS, TCP, SSL (secure TCP)
     - Application Load Balancer (ALB)
+      - Works on request level
       - Layer 7 (HTTP/HTTPS)
       - HTTP, HTTPS, WebSocket
       - Routing Tables
@@ -686,6 +687,19 @@
       - EC2 Instances, ECS tasks, Lambda functions (HTTP request to JSON event), IP addresses (private IP), can route to multiple TG, Health Checks at TG level
     - Network Load Balancer (NLB)
       - TCP, TLC (secure TCP), UDP
+      - Works on connection level
       - Layer 4
+      - NLB has `one static IP per AZ`, supports `Elastic IP`
+      - millions of request per second, less latency 100ms (vs 400ms)
+      - Can Redirect to
+        - EC2 instances, private IP addresses (on-premise machines), other ALB
+      - Health Checks on:
+        - TCP, HTTP, HTTPS Protocols
     - Gateway Load Balancer (GWLB)
-    - Layer 3, IP Protocol
+      - Layer 3, IP Protocol
+      - Uses `GENEVE` protocol on port `6081`
+      - Deploy, scale, and manage a fleet of 3rd party network virtual apps
+      - Firewalls, Intrusion Detection, Deep Packet Inspection, payload manipulation
+      - Works at network levelw - IP Packets
+      - Combines Transparent Network Gateway = Load Balancer
+      - Targets: EC2 Instances and private IPs
