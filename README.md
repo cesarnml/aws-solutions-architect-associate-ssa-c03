@@ -70,9 +70,9 @@
   - [x] ~~_Lesson 050 - EBS Hands On_~~ [2024-01-12]
   - [x] ~~_Lesson 051 - EBS Snapshots_~~ [2024-01-12]
   - [x] ~~_Lesson 052 - EBS Snapshots Hands On_~~ [2024-01-12]
-  - [ ] Lesson 053 - AMI Overview
-  - [ ] Lesson 054 - AMI Hands On
-  - [ ] Lesson 055 - EC2 Instance Store
+  - [x] ~~_Lesson 053 - AMI Overview_~~ [2024-01-15]
+  - [x] ~~_Lesson 054 - AMI Hands On_~~ [2024-01-15]
+  - [x] ~~_Lesson 055 - EC2 Instance Store_~~ [2024-01-15]
   - [ ] Lesson 056 - EBS Volume Types
   - [ ] Lesson 057 - EBS Multi-Attach
   - [ ] Lesson 058 - EBS Encryption
@@ -620,4 +620,3 @@
   - buffer/cache/scratch data/temporary content
   - backups and replication are your responsibility
 - EBS Volume Types (6 Types)
-  -
