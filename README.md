@@ -84,7 +84,7 @@
 - [ ] Section 07: High Availability and Scalability: ELB & ASG (95 min)
   - [x] ~~_Lesson 063 - High Availability and Scalability_~~ [2024-01-15]
   - [x] ~~_Lesson 064 - Elastic Load Balancing (ELB) Overview_~~ [2024-01-15]
-  - [ ] Lesson 065 - Application Load Balancer (ALB)
+  - [x] ~~_Lesson 065 - Application Load Balancer (ALB)_~~ [2024-01-15]
   - [ ] Lesson 066 - Application Load Balancer (ALB) Hands On - Part 1
   - [ ] Lesson 067 - Application Load Balancer (ALB) Hands On - Part 2
   - [ ] Lesson 068 - Network Load Balancer (NLB)
@@ -676,6 +676,14 @@
     - Application Load Balancer (ALB)
       - Layer 7 (HTTP/HTTPS)
       - HTTP, HTTPS, WebSocket
+      - Routing Tables
+        - Can route based on path, hostname, or query strings/headers
+        - Great for micro-services and container-based applications
+      - Port Mapping feature to redirect to dynamic port in ECS
+      - Fixed hostname (`xxx.region.elb.amazonaws.com`)
+      - IP of client found in `X-Forwarded-For`, `X-Forwarded-Port`, `X-Forwarded-Proto`
+    - Target Groups
+      - EC2 Instances, ECS tasks, Lambda functions (HTTP request to JSON event), IP addresses (private IP), can route to multiple TG, Health Checks at TG level
     - Network Load Balancer (NLB)
       - TCP, TLC (secure TCP), UDP
     - Gateway Load Balancer (GWLB)
