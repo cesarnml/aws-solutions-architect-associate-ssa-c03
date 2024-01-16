@@ -94,7 +94,7 @@
   - [x] ~~_*Lesson 072 - Elastic Load Balancer - Cross Zone Load Balancing*_~~ [2024-01-16]
   - [x] ~~_Lesson 073 - Elastic Load Balancer - SSL Certificates_~~ [2024-01-16]
   - [x] ~~_Lesson 074 - Elastic Load Balancer - SSL Certificates Hands On_~~ [2024-01-16]
-  - [ ] Lesson 075 - Elastic Load Balancer - Connection Draining
+  - [x] ~~_Lesson 075 - Elastic Load Balancer - Connection Draining_~~ [2024-01-16]
   - [ ] Lesson 076 - Auto Scaling Groups (ASG) Overview
   - [ ] Lesson 077 - Auto Scaling Groups Hands On
   - [ ] Lesson 078 - Auto Scaling Groups - Scaling Policies
@@ -740,3 +740,8 @@
       - Can specify Security Policy to support older SSL/TLS
     - SNI - Server Name Indication
       - Multiple SSl certificates onto one web server
+  - Connection Draining
+    - CLB - Connection Draining
+    - ALB & NLB - Deregistration Delay
+    - Set to 1 - 3600 seconds (default: 300)
+    - Set to 0 to disable
