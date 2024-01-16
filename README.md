@@ -95,7 +95,7 @@
   - [x] ~~_Lesson 073 - Elastic Load Balancer - SSL Certificates_~~ [2024-01-16]
   - [x] ~~_Lesson 074 - Elastic Load Balancer - SSL Certificates Hands On_~~ [2024-01-16]
   - [x] ~~_Lesson 075 - Elastic Load Balancer - Connection Draining_~~ [2024-01-16]
-  - [ ] Lesson 076 - Auto Scaling Groups (ASG) Overview
+  - [x] ~~_Lesson 076 - Auto Scaling Groups (ASG) Overview_~~ [2024-01-16]
   - [ ] Lesson 077 - Auto Scaling Groups Hands On
   - [ ] Lesson 078 - Auto Scaling Groups - Scaling Policies
   - [ ] Lesson 079 - Auto Scaling Groups - Scaling Policies Hands On
@@ -745,3 +745,10 @@
     - ALB & NLB - Deregistration Delay
     - Set to 1 - 3600 seconds (default: 300)
     - Set to 0 to disable
+- Auto Scaling Group (ASG)
+  - free
+  - scale-out => add instances
+  - scale-in => remove instances
+  - must create a `Launch Template`
+    - ASG can be triggered by CloudWatch Alarms (auto-scaling)
+-
