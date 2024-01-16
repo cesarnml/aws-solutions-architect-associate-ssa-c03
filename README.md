@@ -96,7 +96,7 @@
   - [x] ~~_Lesson 074 - Elastic Load Balancer - SSL Certificates Hands On_~~ [2024-01-16]
   - [x] ~~_Lesson 075 - Elastic Load Balancer - Connection Draining_~~ [2024-01-16]
   - [x] ~~_Lesson 076 - Auto Scaling Groups (ASG) Overview_~~ [2024-01-16]
-  - [ ] Lesson 077 - Auto Scaling Groups Hands On
+  - [x] ~~_Lesson 077 - Auto Scaling Groups Hands On_~~ [2024-01-16]
   - [ ] Lesson 078 - Auto Scaling Groups - Scaling Policies
   - [ ] Lesson 079 - Auto Scaling Groups - Scaling Policies Hands On
 - [ ] Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache (1h 9min)
