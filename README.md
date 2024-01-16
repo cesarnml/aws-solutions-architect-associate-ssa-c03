@@ -91,8 +91,8 @@
   - [x] ~~_Lesson 069 - Network Load Balancer (NLB) Hands On_~~ [2024-01-15]
   - [x] ~~_Lesson 070 - Gateway Load Balancer (GWLB)_~~ [2024-01-15]
   - [x] ~~_Lesson 071 - Elastic Load Balancer - Sticky Sessions_~~ [2024-01-16]
-  - [x] ~~_Lesson 072 - Elastic Load Balancer - Cross Zone Load Balancing_~~ [2024-01-16]
-  - [ ] Lesson 073 - Elastic Load Balancer - SSL Certificates
+  - [x] ~~_*Lesson 072 - Elastic Load Balancer - Cross Zone Load Balancing*_~~ [2024-01-16]
+  - [x] ~~_Lesson 073 - Elastic Load Balancer - SSL Certificates_~~ [2024-01-16]
   - [ ] Lesson 074 - Elastic Load Balancer - SSL Certificates Hands On
   - [ ] Lesson 075 - Elastic Load Balancer - Connection Draining
   - [ ] Lesson 076 - Auto Scaling Groups (ASG) Overview
@@ -724,3 +724,19 @@
     - Enabled by default for ALB (no extra charge for cross AZ data)
     - Can be disabled at TG level
     - Disabled by default in NLB and GWLB (charge if you enable)
+  - SSL Certificate
+    - Secure Socket Layer
+    - TLS = Transport Layer Security
+    - in-flight encryption
+    - Certificate Authorities
+      - Comodo, Symantec, GoDaddy, GlobalSign, Digicert, Letsencrypt
+      - Have an expiration date (you set) and must be renewed
+    - LB uses `X.509` certificate, managed by ACM (AWS Certificate Manager)
+      - can also create, upload your own certs
+    - HTTPS Listener:
+      - Must specify default cert
+      - optional list of certs to support multiple domains
+      - Client can use SNI (Server Name Indication) to specify the hostname
+      - Can specify Security Policy to support older SSL/TLS
+    - SNI - Server Name Indication
+      - Multiple SSl certificates onto one web server
