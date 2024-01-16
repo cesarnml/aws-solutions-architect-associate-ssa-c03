@@ -93,7 +93,7 @@
   - [x] ~~_Lesson 071 - Elastic Load Balancer - Sticky Sessions_~~ [2024-01-16]
   - [x] ~~_*Lesson 072 - Elastic Load Balancer - Cross Zone Load Balancing*_~~ [2024-01-16]
   - [x] ~~_Lesson 073 - Elastic Load Balancer - SSL Certificates_~~ [2024-01-16]
-  - [ ] Lesson 074 - Elastic Load Balancer - SSL Certificates Hands On
+  - [x] ~~_Lesson 074 - Elastic Load Balancer - SSL Certificates Hands On_~~ [2024-01-16]
   - [ ] Lesson 075 - Elastic Load Balancer - Connection Draining
   - [ ] Lesson 076 - Auto Scaling Groups (ASG) Overview
   - [ ] Lesson 077 - Auto Scaling Groups Hands On
