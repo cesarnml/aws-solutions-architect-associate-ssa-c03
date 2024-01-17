@@ -10,6 +10,7 @@
     - [Section 05: EC2 Solutions Architect Level](#section-05-ec2-solutions-architect-level)
     - [Section 06: EC2 Instance Storage](#section-06-ec2-instance-storage)
     - [Section 07: High Availability and Scalability](#section-07-high-availability-and-scalability)
+    - [Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache](#section-08-aws-fundamentals-rds--aurora--elasticache)
 
 ## Lessons
 
@@ -100,7 +101,7 @@
   - [x] ~~_Lesson 078 - Auto Scaling Groups - Scaling Policies_~~ [2024-01-17]
   - [x] ~~_Lesson 079 - Auto Scaling Groups - Scaling Policies Hands On_~~ [2024-01-17]
 - [ ] Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache (1h 9min)
-  - [ ] Lesson 080 - Amazon RDS Overview
+  - [x] ~~_Lesson 080 - Amazon RDS Overview_~~ [2024-01-17]
   - [ ] Lesson 081 - RDS Read Replicas vs Multi AZ
   - [ ] Lesson 082 - Amazon RDS Hands On
   - [ ] Lesson 083 - RDS Custom for Oracle and Microsoft SQL Server
@@ -765,3 +766,22 @@
     - Average Network In/Out (network bound)
     - Custom Metric (pushed to CloudWatch)
   - Cooldown period (default 300 seconds)
+
+### Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache
+
+- RDS - Relational Database Service
+  - Managed DB service that use SQL a query language
+    - Postgres
+    - MySQL
+    - MariaDB
+    - Oracle
+    - Microsoft SQL Server
+    - Aurora (AWS Proprietary DB)
+  - What you get:
+    - automatic provisioning, os patching
+    - continuous backups (Point in Time Restore)
+    - Monitoring, Read replicas, DR with MultiAZ, Maintenance windows, Scalability, storage on gp2 or io1
+  - CANNOT SSH into instance
+  - Storage Auto Scales
+  - Set a `Maximum Storage Threshold`
+    - Triggers on: 10% space remaining for 5 minutes, and 6 hour cooldown
