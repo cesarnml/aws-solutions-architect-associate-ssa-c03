@@ -102,9 +102,9 @@
   - [x] ~~_Lesson 079 - Auto Scaling Groups - Scaling Policies Hands On_~~ [2024-01-17]
 - [ ] Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache (1h 9min)
   - [x] ~~_Lesson 080 - Amazon RDS Overview_~~ [2024-01-17]
-  - [ ] Lesson 081 - RDS Read Replicas vs Multi AZ
-  - [ ] Lesson 082 - Amazon RDS Hands On
-  - [ ] Lesson 083 - RDS Custom for Oracle and Microsoft SQL Server
+  - [x] ~~_Lesson 081 - RDS Read Replicas vs Multi AZ_~~ [2024-01-17]
+  - [x] ~~_Lesson 082 - Amazon RDS Hands On_~~ [2024-01-17]
+  - [x] ~~_Lesson 083 - RDS Custom for Oracle and Microsoft SQL Server_~~ [2024-01-17]
   - [ ] Lesson 084 - Amazon Aurora
   - [ ] Lesson 085 - Amazon Aurora Hands On
   - [ ] Lesson 086 - Amazon Aurora Advanced Concepts
@@ -785,3 +785,8 @@
   - Storage Auto Scales
   - Set a `Maximum Storage Threshold`
     - Triggers on: 10% space remaining for 5 minutes, and 6 hour cooldown
+  - RDS Custom
+    - Oracle and Microsoft SQL Server
+    - Access to underlying instances
+      - config settings, patches, enable native features, SSH or SSM Session Manager into EC2
+      - DEACTIVATE Automation Mode while tweaking
