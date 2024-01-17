@@ -105,9 +105,9 @@
   - [x] ~~_Lesson 081 - RDS Read Replicas vs Multi AZ_~~ [2024-01-17]
   - [x] ~~_Lesson 082 - Amazon RDS Hands On_~~ [2024-01-17]
   - [x] ~~_Lesson 083 - RDS Custom for Oracle and Microsoft SQL Server_~~ [2024-01-17]
-  - [ ] Lesson 084 - Amazon Aurora
-  - [ ] Lesson 085 - Amazon Aurora Hands On
-  - [ ] Lesson 086 - Amazon Aurora Advanced Concepts
+  - [x] ~~_Lesson 084 - Amazon Aurora_~~ [2024-01-17]
+  - [x] ~~_Lesson 085 - Amazon Aurora Hands On_~~ [2024-01-17]
+  - [x] ~~_Lesson 086 - Amazon Aurora Advanced Concepts_~~ [2024-01-17]
   - [ ] Lesson 087 - RDS & Aurora - Backup and Monitoring
   - [ ] Lesson 088 - RDS Security
   - [ ] Lesson 089 - RDS Proxy
@@ -785,8 +785,26 @@
   - Storage Auto Scales
   - Set a `Maximum Storage Threshold`
     - Triggers on: 10% space remaining for 5 minutes, and 6 hour cooldown
+  - RDS Read Replicas
+    - Up to 5
+    - Within AZ, Cross AZ, Cross Region
+    - ASYNC Replication
+    - Can be promoted to independent DB
+    - Application must update connection string to make use of read replicas
+    - No cross AZ cost, but yes cost if cross Region
+  - RDS Multi AZ <> Disaster Recovery (SYNC Replication)
+    - One DNS name - automatic failover to standby
+    - Increase availability
+    - Read replicas can also be setup as MultiAZ for DR
+  - SingleAZ to MultiAZ
+    - zero downtime
+    - 'modify' SYNC Replication to Standby DB
   - RDS Custom
     - Oracle and Microsoft SQL Server
     - Access to underlying instances
       - config settings, patches, enable native features, SSH or SSM Session Manager into EC2
       - DEACTIVATE Automation Mode while tweaking
+- Amazon Aurora
+  - Compatible with Postgres or MySQL
+  - 5x performance MySQL and 3x over Postgres
+  - 10GB to 128GB (grows in increments)
