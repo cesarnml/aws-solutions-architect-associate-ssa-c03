@@ -81,7 +81,7 @@
   - [x] ~~_Lesson 060 - Amazon EFS Hands On_~~ [2024-01-15]
   - [x] ~~_Lesson 061 - EFS vs EBS_~~ [2024-01-15]
   - [x] ~~_Lesson 062 - EBS & EFS Section Cleanup_~~ [2024-01-15]
-- [ ] Section 07: High Availability and Scalability: ELB & ASG (95 min)
+- [x] ~~_Section 07: High Availability and Scalability: ELB & ASG (95 min)_~~ [2024-01-17]
   - [x] ~~_Lesson 063 - High Availability and Scalability_~~ [2024-01-15]
   - [x] ~~_Lesson 064 - Elastic Load Balancing (ELB) Overview_~~ [2024-01-15]
   - [x] ~~_Lesson 065 - Application Load Balancer (ALB)_~~ [2024-01-15]
@@ -97,8 +97,8 @@
   - [x] ~~_Lesson 075 - Elastic Load Balancer - Connection Draining_~~ [2024-01-16]
   - [x] ~~_Lesson 076 - Auto Scaling Groups (ASG) Overview_~~ [2024-01-16]
   - [x] ~~_Lesson 077 - Auto Scaling Groups Hands On_~~ [2024-01-16]
-  - [ ] Lesson 078 - Auto Scaling Groups - Scaling Policies
-  - [ ] Lesson 079 - Auto Scaling Groups - Scaling Policies Hands On
+  - [x] ~~_Lesson 078 - Auto Scaling Groups - Scaling Policies_~~ [2024-01-17]
+  - [x] ~~_Lesson 079 - Auto Scaling Groups - Scaling Policies Hands On_~~ [2024-01-17]
 - [ ] Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache (1h 9min)
   - [ ] Lesson 080 - Amazon RDS Overview
   - [ ] Lesson 081 - RDS Read Replicas vs Multi AZ
@@ -751,4 +751,17 @@
   - scale-in => remove instances
   - must create a `Launch Template`
     - ASG can be triggered by CloudWatch Alarms (auto-scaling)
--
+- Auto Scaling Group Scaling Policies
+  - Dynamic Scaling Policies (3 Types)
+    - Target Tracking Scaling
+      - Average CPU
+    - Simple / Step Scaling
+    - Scheduled Actions
+  - Predictive Scaling
+    - continuously forecast load and schedule scaling
+  - Good metrics to scale on:
+    - CPUUtilization
+    - RequestCountPerTarget
+    - Average Network In/Out (network bound)
+    - Custom Metric (pushed to CloudWatch)
+  - Cooldown period (default 300 seconds)
