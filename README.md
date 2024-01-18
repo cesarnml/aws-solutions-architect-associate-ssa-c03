@@ -807,7 +807,85 @@
 - Amazon Aurora
   - Compatible with Postgres or MySQL
   - 5x performance MySQL and 3x over Postgres
-  - 10GB to 128GB (grows in increments)
+  - `10GB` to `128GB` (grows in increments)
+  - Up to 15 read replicas (sub `10ms` replica lag)
+  - Failover is instantaneous, HA!!!
+  - 6 copies across 3 AZ
+    - 4 out 6 for writes
+    - 3 out 6 for reads
+    - self-healing with peer-to-peer replication
+    - storage stored across 100s of volumes
+  - 1 Master that handles WRITES (failure in under 30secs)
+  - Up to 15 RR (any can be upgraded to master) with AUTO-Scaling!!!
+  - Support cross region replication
+  - `Writer Endpoint` and `Reader Endpoint`
+    - Features:
+      - Automatic fail-over
+      - Backup and Recovery
+      - Isolation and Security
+      - Industry compliance
+      - Push-button scaling
+      - Automatic Patching with Zero-Downtime
+      - Advanced Monitoring
+      - Routine maintenance
+      - Backtrack (without backup)
+  - `Custom Endpoints`
+    - Bigger instances for analytics - no longer linked to reader endpoint
+  - `Aurora Serverless`
+    - Automatic DB instantiation and auto-scaling based on usage. No capacity planning. Pay/sec
+      - client talks to `Proxy Fleet` managed by Aurora
+  - `Aurora MultiMaster` <> IMMEDIATE failover
+    - All nodes are RW
+  - `Global Aurora`
+    - Two Flavors
+      - Aurora Cross Region Read Replicas
+      - Aurora Global Database (recommended)
+        - 1 Primary Region
+        - 5 Secondary regions (read-only), replication lag less than 1 second
+        - Up to 16 RR per secondary - decrease lag, HA
+        - DR less than 1 minute
+        - `Typical cross-region replication takes LESS THAN 1 SECOND`
+  - `Aurora Machine Learning`
+    - Integrates with AWS ML services
+      - `Amazon SageMaker`
+      - `Amazon Comprehend` (sentiment analysis)
+      - Use CASE: fraud detection, ads targeting, product recommendations, sentiment analysis
+- `RDS Backups`
+  - `Automated Backups` - can be disabled
+    - daily backups
+    - Transaction logs are backed-up by RDS every`5 minutes` (_5 minutes ago to oldest_)
+    - 1 to 35 days, 0 to disable
+  - `Manual DB Snapshots`
+    - triggered by user
+    - CAN BE STORED FOREVER
+- `Aurora Backups`
+  - `Automated backups` - **CANNOT BE DISABLED** - Point-In-Time Recovery
+  - Restoring a RDS backup/snapshot _CREATES A NEW DB_
+  - Can restore a MySQL RDS database from S3
+    - backup on premise DB -> store in S3, -> restore to MySQL RDS
+  - Can restore to MySQL Aurora Cluster for S3
+    - backup on premise DB using Percona XtraBackup -> store in S3 -> restore to MySQL Aurora cluster
+- `Aurora Database Cloning`
+  - Faster than snapshot and restore - great for staging and testing, fast on cost-effective
+  - DOES NOT impact production database
+- RDS & Aurora Security
+  - At-Rest: AWS KMS encryption (configured on creation)
+    - Must encrypt master for RR encryption
+  - In-Flight: TLS-ready by default, use AWS-TLS root certificates
+  - Supports IAM Authentication (IAM Roles)
+  - Control network access via Security Groups
+  - NO SSH except for Custom RDS
+  - Audit Logs can be enabled (limited retention time) - send to CloudWatch for long-term storage
+- `Amazon RDS Proxy` - also works with Aurora
+  - Allow apps to pool and shared DB connections
+  - Improve efficiency by reducing stress on DB and minimize open connections
+  - Serverless, auto-scaling, HA (multi-az)
+  - Reduce Failover time by 66%
+  - Supports RDS(MySQL, Postgres, MariaDB) and Aurora
+  - No code changes just update endpoints
+  - `Enforce IAM Authentication for DB, securely store credentials in AWS Secrets Manager`
+  - **NEVER Publicly accessible; must connect within VPC**
+  - Hella useful for Lambda function access to RDS/Aurora
 - Amazon ElastiCache
   - managed Redis or Memcached service
   - in-memory databases HP and Low Latency
