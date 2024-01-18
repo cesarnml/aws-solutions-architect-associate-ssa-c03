@@ -11,6 +11,7 @@
     - [Section 06: EC2 Instance Storage](#section-06-ec2-instance-storage)
     - [Section 07: High Availability and Scalability](#section-07-high-availability-and-scalability)
     - [Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache](#section-08-aws-fundamentals-rds--aurora--elasticache)
+    - [Section 09: Route 53](#section-09-route-53)
 
 ## Lessons
 
@@ -924,3 +925,5 @@
         - Add/Update cache on write to DB (no stale data)
       - Session Store
         - Expire with TTL
+
+### Section 09: Route 53
