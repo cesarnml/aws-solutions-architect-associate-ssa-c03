@@ -100,7 +100,7 @@
   - [x] ~~_Lesson 077 - Auto Scaling Groups Hands On_~~ [2024-01-16]
   - [x] ~~_Lesson 078 - Auto Scaling Groups - Scaling Policies_~~ [2024-01-17]
   - [x] ~~_Lesson 079 - Auto Scaling Groups - Scaling Policies Hands On_~~ [2024-01-17]
-- [ ] Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache (1h 9min)
+- [x] ~~_Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache (1h 9min)_~~ [2024-01-18]
   - [x] ~~_Lesson 080 - Amazon RDS Overview_~~ [2024-01-17]
   - [x] ~~_Lesson 081 - RDS Read Replicas vs Multi AZ_~~ [2024-01-17]
   - [x] ~~_Lesson 082 - Amazon RDS Hands On_~~ [2024-01-17]
@@ -111,9 +111,9 @@
   - [x] ~~_Lesson 087 - RDS & Aurora - Backup and Monitoring_~~ [2024-01-18]
   - [x] ~~_Lesson 088 - RDS Security_~~ [2024-01-18]
   - [x] ~~_Lesson 089 - RDS Proxy_~~ [2024-01-18]
-  - [ ] Lesson 090 - ElastiCache Overview
-  - [ ] Lesson 091 - ElastiCache Hands On
-  - [ ] Lesson 092 - ElastiCache for Solutions Architects
+  - [x] ~~_Lesson 090 - ElastiCache Overview_~~ [2024-01-18]
+  - [x] ~~_Lesson 091 - ElastiCache Hands On_~~ [2024-01-18]
+  - [x] ~~_Lesson 092 - ElastiCache for Solutions Architects_~~ [2024-01-18]
 - [ ] Section 09: Route 53 (1h 22min)
   - [ ] Lesson 093 - What is a DNS?
   - [ ] Lesson 094 - Route 53 Overview
@@ -808,3 +808,41 @@
   - Compatible with Postgres or MySQL
   - 5x performance MySQL and 3x over Postgres
   - 10GB to 128GB (grows in increments)
+- Amazon ElastiCache
+  - managed Redis or Memcached service
+  - in-memory databases HP and Low Latency
+  - Help reduce load on DB for common read queries
+  - helps make app stateless
+  - AWS manages OS maintenance, optimization, setup, config, monitoring, DR, backups
+  - REQUIRES heavy APP changes
+  - Must have cache invalidation strategy to ensure cache is fresh
+  - USE CASE:
+    - `session store`, login, write session data to cache, new app looks up session data in cache to keep user logged in (achieve stateless app)
+    - `gaming leaderboard`
+      - `Redis sorted sets` - guarantees uniqueness and element ordering
+  - REDIS vs MEMCACHED
+    - REDIS
+      - MZ with AutoFailure
+      - Read Replicas scale reads and HighAvailability
+      - Data durability with `AOF persistence`
+      - Backup and restore
+    - MEMCACHED
+      - multi-node partitioning of data (sharding)
+      - No HA (no replication)
+      - No persistence
+      - No backup, no restore
+      - Multi-threaded (via sharding)
+  - DO NOT SUPPORT AIM authentication
+    - USE:
+      - `Redis AUTH` (password/token)
+      - Extra level of security on top of Security Groups
+      - Supports SSL encryption
+    - `Memcached`
+      - Supports SASL-based authentication
+    - PATTERNS:
+      - Lazy Loading
+        - all read data is written to cache; BEWARE of stale data
+      - Write Through
+        - Add/Update cache on write to DB (no stale data)
+      - Session Store
+        - Expire with TTL
