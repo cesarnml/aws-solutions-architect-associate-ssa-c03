@@ -108,9 +108,9 @@
   - [x] ~~_Lesson 084 - Amazon Aurora_~~ [2024-01-17]
   - [x] ~~_Lesson 085 - Amazon Aurora Hands On_~~ [2024-01-17]
   - [x] ~~_Lesson 086 - Amazon Aurora Advanced Concepts_~~ [2024-01-17]
-  - [ ] Lesson 087 - RDS & Aurora - Backup and Monitoring
-  - [ ] Lesson 088 - RDS Security
-  - [ ] Lesson 089 - RDS Proxy
+  - [x] ~~_Lesson 087 - RDS & Aurora - Backup and Monitoring_~~ [2024-01-18]
+  - [x] ~~_Lesson 088 - RDS Security_~~ [2024-01-18]
+  - [x] ~~_Lesson 089 - RDS Proxy_~~ [2024-01-18]
   - [ ] Lesson 090 - ElastiCache Overview
   - [ ] Lesson 091 - ElastiCache Hands On
   - [ ] Lesson 092 - ElastiCache for Solutions Architects
