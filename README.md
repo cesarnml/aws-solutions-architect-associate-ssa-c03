@@ -116,11 +116,11 @@
   - [x] ~~_Lesson 091 - ElastiCache Hands On_~~ [2024-01-18]
   - [x] ~~_Lesson 092 - ElastiCache for Solutions Architects_~~ [2024-01-18]
 - [ ] Section 09: Route 53 (1h 22min)
-  - [ ] Lesson 093 - What is a DNS?
-  - [ ] Lesson 094 - Route 53 Overview
-  - [ ] Lesson 095 - Route 53 - Registering a domain
-  - [ ] Lesson 096 - Route 53 - Creating our first records
-  - [ ] Lesson 097 - Route 53 - EC2 Setup
+  - [x] ~~_Lesson 093 - What is a DNS?_~~ [2024-01-19]
+  - [x] ~~_Lesson 094 - Route 53 Overview_~~ [2024-01-19]
+  - [x] ~~_Lesson 095 - Route 53 - Registering a domain_~~ [2024-01-19]
+  - [x] ~~_Lesson 096 - Route 53 - Creating our first records_~~ [2024-01-19]
+  - [x] ~~_Lesson 097 - Route 53 - EC2 Setup_~~ [2024-01-19]
   - [ ] Lesson 098 - Route 53 - TTL
   - [ ] Lesson 099 - Route 53 CNAME vs Alias
   - [ ] Lesson 100 - Routing Policy - Simple
