@@ -139,8 +139,8 @@
   - [x] ~~_Lesson 111 - Solutions Architecture Discussion Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 112 - WhatsTheTime.com_~~ [2024-01-23]
   - [x] ~~_Lesson 113 - MyClothes.com_~~ [2024-01-23]
-  - [ ] Lesson 114 - MyWordPress.com
-  - [ ] Lesson 115 - Instantiating application quickly
+  - [x] ~~_Lesson 114 - MyWordPress.com_~~ [2024-01-23]
+  - [x] ~~_Lesson 115 - Instantiating application quickly_~~ [2024-01-23]
   - [ ] Lesson 116 - Beanstalk Overview
   - [ ] Lesson 117 - Beanstalk Hands On
 - [ ] Section 11: Amazon S3 Introduction (47 min)
@@ -1002,4 +1002,18 @@
   - Scale reads with RDS RR (up to 5) or implement `write-through` via ElastiCache (cache validation)
   - Multi-AZ for Disaster Recovery
   - Example of 3-Tier Architecture
-- ## `mywordpress.com`
+- `mywordpress.com`
+  - display/upload images
+  - Route 53 - Multi AZ ELB - MultiAZ EC2 within ASG - ENI (Elastic Network Interface) <=> EFS (Elastic File System)
+- `Instantiating Application Quickly`
+  - EC2 Instances => use `Golden AMI` - very common pattern
+  - Dynamic configuration => `Bootstrapping with User Data`
+  - Hybrid: Golden AMI + User Data (Elastic Beanstalk)
+  - RDS => restore from snapshot
+  - EBS/EFS => restore from snapshot
+- `Elastic Beanstalk`
+  - Web App 3-Tier
+    - PUBLIC SUBNET (CLIENT facing)
+    - PRIVATE SUBNET (APPLICATION layer)
+    - DATA SUBNET (database/cache layer)
+-
