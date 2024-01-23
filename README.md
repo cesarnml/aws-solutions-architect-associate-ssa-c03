@@ -144,7 +144,7 @@
   - [x] ~~_Lesson 115 - Instantiating application quickly_~~ [2024-01-23]
   - [x] ~~_Lesson 116 - Beanstalk Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 117 - Beanstalk Hands On_~~ [2024-01-23]
-- [ ] Section 11: Amazon S3 Introduction (47 min)
+- [x] ~~_Section 11: Amazon S3 Introduction (47 min)_~~ [2024-01-23]
   - [x] ~~_Lesson 118 - S3 Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 119 - S3 Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 120 - S3 Security: Bucket Policy_~~ [2024-01-23]
@@ -156,8 +156,8 @@
   - [x] ~~_Lesson 126 - S3 Replication_~~ [2024-01-23]
   - [x] ~~_Lesson 127 - S3 Replication Notes_~~ [2024-01-23]
   - [x] ~~_Lesson 128 - S3 Replication Hands On_~~ [2024-01-23]
-  - [ ] Lesson 129 - S3 Storage Classes Overview
-  - [ ] Lesson 130 - S3 Storage Classes Hands On
+  - [x] ~~_Lesson 129 - S3 Storage Classes Overview_~~ [2024-01-23]
+  - [x] ~~_Lesson 130 - S3 Storage Classes Hands On_~~ [2024-01-23]
 - [ ] Lesson 131 - IAM Roles and Policies Hands On
 - [ ] Lesson 132 - AWS Policy Simulator
 - [ ] Lesson 133 - AWS EC2 instance Metadata
@@ -1065,3 +1065,17 @@
   - No transitive "chain" replication across buckets
   - Can replicate delete markers, but deletions with version ID are not replicated (NO MALICIOUS DELETES)
 - `S3 Storage Classes`
+  - Amazon S3 Standard
+    - Durability 9 9s. - same across all storage class
+    - Availability - varies based on storage class, 99.99%
+  - Amazon S3 Standard-Infrequent Access
+  - Amazon S3 One Zone-Infrequent Access
+  - Amazon S3 Glacier Instant Retrieval (storage and retrieval cost)
+    - millisecond retrieval, 90 day minimum
+  - Amazon S3 Glacier Flexible Retrieval
+    - Expedited (1-5min), Standard (3-5 hours), Bulk (5-12 hours) free; 90 day minimum storage
+  - Amazon S3 Glacier Deep Archive
+    - Standard (12 hours), Bulk (48 hours)
+    - 180 days
+  - Amazon S3 Intelligent Tiering
+    - small monthly monitoring and auto-tiering fee, no retrieval charges
