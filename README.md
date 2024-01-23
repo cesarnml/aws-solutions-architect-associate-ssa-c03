@@ -145,7 +145,7 @@
   - [x] ~~_Lesson 116 - Beanstalk Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 117 - Beanstalk Hands On_~~ [2024-01-23]
 - [ ] Section 11: Amazon S3 Introduction (47 min)
-  - [ ] Lesson 118 - S3 Overview
+  - [x] ~~_Lesson 118 - S3 Overview_~~ [2024-01-23]
   - [ ] Lesson 119 - S3 Hands On
   - [ ] Lesson 120 - S3 Security: Bucket Policy
   - [ ] Lesson 121 - S3 Security: Bucket Policy Hands On
@@ -1024,3 +1024,23 @@
       - Tiers: (Web Server Environment Tier AND Worker Environment Tier)
 
 ### Section 11: Amazon S3 Introduction
+
+- S3 = Simple Storage Service
+  - use cases:
+    - Backup and storage
+    - Disaster Recovery
+    - Archive
+    - Hybrid Cloud storage
+    - Application hosting
+    - Media hosting
+    - Data Lakes & Big Data Analytics
+    - Software Delivery
+    - Static Website
+  - Stores objects (files) in buckets (directories)
+  - Bucket names must `Globally Unique Name`
+  - Buckets are defined at the REGION level
+    - no uppercase, no underscore, 3-63 characters, start with number or lowercase letter, no start with `xn--`, no end with `-s3alias`
+  - object files have a key (prefix + object name)
+  - Max object size: 5TB
+  - If greater than 5GB must use "multi-part upload"
+  - Can have Metadata, Tags, VersionID
