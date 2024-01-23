@@ -153,9 +153,9 @@
   - [x] ~~_Lesson 123 - S3 Website Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 124 - S3 Versioning_~~ [2024-01-23]
   - [x] ~~_Lesson 125 - S3 Versioning Hands On_~~ [2024-01-23]
-  - [ ] Lesson 126 - S3 Replication
-  - [ ] Lesson 127 - S3 Replication Notes
-  - [ ] Lesson 128 - S3 Replication Hands On
+  - [x] ~~_Lesson 126 - S3 Replication_~~ [2024-01-23]
+  - [x] ~~_Lesson 127 - S3 Replication Notes_~~ [2024-01-23]
+  - [x] ~~_Lesson 128 - S3 Replication Hands On_~~ [2024-01-23]
   - [ ] Lesson 129 - S3 Storage Classes Overview
   - [ ] Lesson 130 - S3 Storage Classes Hands On
 - [ ] Lesson 131 - IAM Roles and Policies Hands On
@@ -1056,3 +1056,12 @@
 - `Amazon S3 - Versioning`
   - Enabled at bucket level
   - version "null" for objects that existed prior to enabling versioning
+- `S3 Replication`
+  - CRR - Cross Region Replication
+  - SRR - Same Region Replication
+  - Must enable versioning in SOURCE and DESTINATION
+  - Async operation
+  - Only new objects are replicated. Use S3 BATCH REPLICATION to replicate existing objects
+  - No transitive "chain" replication across buckets
+  - Can replicate delete markers, but deletions with version ID are not replicated (NO MALICIOUS DELETES)
+- `S3 Storage Classes`
