@@ -13,6 +13,7 @@
     - [Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache](#section-08-aws-fundamentals-rds--aurora--elasticache)
     - [Section 09: Route 53](#section-09-route-53)
     - [Section 10: Classic Solutions Architecture Discussions](#section-10-classic-solutions-architecture-discussions)
+    - [Section 11: Amazon S3 Introduction](#section-11-amazon-s3-introduction)
 
 ## Lessons
 
@@ -135,14 +136,14 @@
   - [x] ~~_Lesson 108 - Routing Policy - Multi Value_~~ [2024-01-23]
   - [x] ~~_Lesson 109 - 3rd Party Domains & Route 53_~~ [2024-01-23]
   - [x] ~~_Lesson 110 - Route 53 - Section Cleanup_~~ [2024-01-23]
-- [ ] Section 10: Classic Solutions Architecture Discussions (45min)
+- [x] ~~_Section 10: Classic Solutions Architecture Discussions (45min)_~~ [2024-01-23]
   - [x] ~~_Lesson 111 - Solutions Architecture Discussion Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 112 - WhatsTheTime.com_~~ [2024-01-23]
   - [x] ~~_Lesson 113 - MyClothes.com_~~ [2024-01-23]
   - [x] ~~_Lesson 114 - MyWordPress.com_~~ [2024-01-23]
   - [x] ~~_Lesson 115 - Instantiating application quickly_~~ [2024-01-23]
-  - [ ] Lesson 116 - Beanstalk Overview
-  - [ ] Lesson 117 - Beanstalk Hands On
+  - [x] ~~_Lesson 116 - Beanstalk Overview_~~ [2024-01-23]
+  - [x] ~~_Lesson 117 - Beanstalk Hands On_~~ [2024-01-23]
 - [ ] Section 11: Amazon S3 Introduction (47 min)
   - [ ] Lesson 118 - S3 Overview
   - [ ] Lesson 119 - S3 Hands On
@@ -1011,9 +1012,15 @@
   - Hybrid: Golden AMI + User Data (Elastic Beanstalk)
   - RDS => restore from snapshot
   - EBS/EFS => restore from snapshot
-- `Elastic Beanstalk`
+- `Elastic Beanstalk` (like Netlify for AWS - infrastructure as a platform service)
   - Web App 3-Tier
     - PUBLIC SUBNET (CLIENT facing)
     - PRIVATE SUBNET (APPLICATION layer)
     - DATA SUBNET (database/cache layer)
--
+  - Components:
+    - Application
+    - Application Version
+    - Environment
+      - Tiers: (Web Server Environment Tier AND Worker Environment Tier)
+
+### Section 11: Amazon S3 Introduction
