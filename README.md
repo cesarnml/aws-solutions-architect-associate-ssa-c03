@@ -146,9 +146,9 @@
   - [x] ~~_Lesson 117 - Beanstalk Hands On_~~ [2024-01-23]
 - [ ] Section 11: Amazon S3 Introduction (47 min)
   - [x] ~~_Lesson 118 - S3 Overview_~~ [2024-01-23]
-  - [ ] Lesson 119 - S3 Hands On
-  - [ ] Lesson 120 - S3 Security: Bucket Policy
-  - [ ] Lesson 121 - S3 Security: Bucket Policy Hands On
+  - [x] ~~_Lesson 119 - S3 Hands On_~~ [2024-01-23]
+  - [x] ~~_Lesson 120 - S3 Security: Bucket Policy_~~ [2024-01-23]
+  - [x] ~~_Lesson 121 - S3 Security: Bucket Policy Hands On_~~ [2024-01-23]
   - [ ] Lesson 122 - S3 Website Overview
   - [ ] Lesson 123 - S3 Website Hands On
   - [ ] Lesson 124 - S3 Versioning
@@ -1044,3 +1044,11 @@
   - Max object size: 5TB
   - If greater than 5GB must use "multi-part upload"
   - Can have Metadata, Tags, VersionID
+  - Security
+    - `User-Based` - IAM Policies
+    - `Resource-Based`
+      - `Bucket Policies` - bucket wide rules - Allows Cross Account access
+      - `Object Access Control List` - finer grained (can be disabled)
+      - `Bucket Access control List` - less common (can be disabled)
+    - Can access if IAM permission allows it OR resource allows it AND not explicitly denied
+  -
