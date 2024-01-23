@@ -173,7 +173,7 @@
   - [x] ~~_Lesson 140 - S3 Performance_~~ [2024-01-23]
   - [x] ~~_Lesson 141 - S3 Select & Glacier Select_~~ [2024-01-23]
   - [x] ~~_Lesson 142 - S3 Batch Operations_~~ [2024-01-23]
-- [ ] Section 13: Amazon S3 Security (52 min)
+- [x] ~~_Section 13: Amazon S3 Security (52 min)_~~ [2024-01-23]
   - [x] ~~_Lesson 143 - S3 Encryption_~~ [2024-01-23]
   - [x] ~~_Lesson 144 - S3 Encryption Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 145 - S3 Default Encryption_~~ [2024-01-23]
@@ -183,10 +183,10 @@
   - [x] ~~_Lesson 149 - S3 MFA Delete Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 150 - S3 Access Logs_~~ [2024-01-23]
   - [x] ~~_Lesson 151 - S3 Access Logs Hands On_~~ [2024-01-23]
-  - [ ] Lesson 152 - S3 Pre-signed URLs
-  - [ ] Lesson 153 - S3 Pre-signed URLs Hands On
-  - [ ] Lesson 154 - Glacier Vault Lock & S3 Object Look
-  - [ ] Lesson 155 - S3 Access Points & Object Lambda
+  - [x] ~~_Lesson 152 - S3 Pre-signed URLs_~~ [2024-01-23]
+  - [x] ~~_Lesson 153 - S3 Pre-signed URLs Hands On_~~ [2024-01-23]
+  - [x] ~~_Lesson 154 - Glacier Vault Lock & S3 Object Look_~~ [2024-01-23]
+  - [x] ~~_Lesson 155 - S3 Access Points & Object Lambda_~~ [2024-01-23]
 - [ ] Section 14: Cloudfront & AWS Global Accelerator (35 min)
   - [ ] Lesson 156 - CloudFront Overview
   - [ ] Lesson 157 - CloudFront with S3 - Hands On
@@ -1164,4 +1164,22 @@
   - Can be analyzed using Amazon Athena
   - DO NOT set logging bucket to same as monitoring bucket!!!
     - Leads to a logging loop!!!
-  -
+- `S3 Pre-Signed URLs`
+  - URL Expiration (1min to 720 min in Console; 7 days max in AWS CLI/SDK)
+- `S3 Glacier Vault Lock`
+  - it's like a bucket where you can delete shit (WORM - Write Once Read Many)
+  - Vault Lock Policy
+  - Helpful for compliance
+- `S3 Object Lock` - must enable versioning; blocks version deletion
+  - Retention Modes
+    - `Compliance` => no one can delete shit
+    - `Governance` => admins/root can delete shit
+  - Retention Period - Protect object for a fixed amount of time; can be extended
+  - `Legal Hold`
+    - _s3:PutObjectLegalHold_ IAM Permission
+    - protect object indefinitely; independent from retention period
+- `S3 Access Points`
+  - each AP has its own DNS name (Internet Origin or VPC Origin)
+  - AP Policy - 1:1 Manage Security at Scale
+- `S3 Object Lambda`
+  - allows AWS Lambda Functions to change object before retrieved by caller
