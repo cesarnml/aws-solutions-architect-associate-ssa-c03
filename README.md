@@ -149,8 +149,8 @@
   - [x] ~~_Lesson 119 - S3 Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 120 - S3 Security: Bucket Policy_~~ [2024-01-23]
   - [x] ~~_Lesson 121 - S3 Security: Bucket Policy Hands On_~~ [2024-01-23]
-  - [ ] Lesson 122 - S3 Website Overview
-  - [ ] Lesson 123 - S3 Website Hands On
+  - [x] ~~_Lesson 122 - S3 Website Overview_~~ [2024-01-23]
+  - [x] ~~_Lesson 123 - S3 Website Hands On_~~ [2024-01-23]
   - [ ] Lesson 124 - S3 Versioning
   - [ ] Lesson 125 - S3 Versioning Hands On
   - [ ] Lesson 126 - S3 Replication
@@ -1051,4 +1051,5 @@
       - `Object Access Control List` - finer grained (can be disabled)
       - `Bucket Access control List` - less common (can be disabled)
     - Can access if IAM permission allows it OR resource allows it AND not explicitly denied
-  -
+  - static site:
+    - `http://BUCKET-NAME.s3-website-AWS-REGION.amazonaws.com`
