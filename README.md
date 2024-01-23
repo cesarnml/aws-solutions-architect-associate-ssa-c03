@@ -181,8 +181,8 @@
   - [x] ~~_Lesson 147 - S3 CORDS Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 148 - S3 MFA Delete_~~ [2024-01-23]
   - [x] ~~_Lesson 149 - S3 MFA Delete Hands On_~~ [2024-01-23]
-  - [ ] Lesson 150 - S3 Access Logs
-  - [ ] Lesson 151 - S3 Access Logs Hands On
+  - [x] ~~_Lesson 150 - S3 Access Logs_~~ [2024-01-23]
+  - [x] ~~_Lesson 151 - S3 Access Logs Hands On_~~ [2024-01-23]
   - [ ] Lesson 152 - S3 Pre-signed URLs
   - [ ] Lesson 153 - S3 Pre-signed URLs Hands On
   - [ ] Lesson 154 - Glacier Vault Lock & S3 Object Look
@@ -1158,3 +1158,10 @@
   - Destination but allow requests, CORS HEADERS `Access-Control-Allow-Origin`, `Access-Control-Allow-Methods`
 - `Amazon S3 - MFA Delete`
   - Required: Permanently delete an object, or disable Versioning. Only bucket owner and root account can disable MFA delete
+  - `aws configure --profile NAME-OF-PROFILE`
+  - `aws s3api put-bucket-versioning --bucket NAME-OF-BUCKET --versioning-configuration Status=Enabled,MFADelete=Enabled --mfa "ARN-OF-MFA-DEVICE MFA-CODE" --profile NAME-OF-PROFILE`
+- `S3 Access Logs`
+  - Can be analyzed using Amazon Athena
+  - DO NOT set logging bucket to same as monitoring bucket!!!
+    - Leads to a logging loop!!!
+  -
