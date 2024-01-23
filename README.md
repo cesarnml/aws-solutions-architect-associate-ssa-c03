@@ -158,10 +158,10 @@
   - [x] ~~_Lesson 128 - S3 Replication Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 129 - S3 Storage Classes Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 130 - S3 Storage Classes Hands On_~~ [2024-01-23]
-- [ ] Lesson 131 - IAM Roles and Policies Hands On
-- [ ] Lesson 132 - AWS Policy Simulator
-- [ ] Lesson 133 - AWS EC2 instance Metadata
-- [ ] Lesson 134 - AWS SDK Overview
+- [x] ~~_Lesson 131 - IAM Roles and Policies Hands On_~~ [2024-01-23]
+- [x] ~~_Lesson 132 - AWS Policy Simulator_~~ [2024-01-23]
+- [x] ~~_Lesson 133 - AWS EC2 Instance Metadata_~~ [2024-01-23]
+- [x] ~~_Lesson 134 - AWS SDK Overview_~~ [2024-01-23]
 - [ ] Section 12: Advanced Amazon S3 (26 min)
   - [ ] Lesson 135 - S3 Lifecycle Rules (with S3 Analytics)
   - [ ] Lesson 136 - S3 Lifecycle Rules Hands On
