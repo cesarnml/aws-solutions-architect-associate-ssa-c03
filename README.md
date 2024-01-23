@@ -151,8 +151,8 @@
   - [x] ~~_Lesson 121 - S3 Security: Bucket Policy Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 122 - S3 Website Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 123 - S3 Website Hands On_~~ [2024-01-23]
-  - [ ] Lesson 124 - S3 Versioning
-  - [ ] Lesson 125 - S3 Versioning Hands On
+  - [x] ~~_Lesson 124 - S3 Versioning_~~ [2024-01-23]
+  - [x] ~~_Lesson 125 - S3 Versioning Hands On_~~ [2024-01-23]
   - [ ] Lesson 126 - S3 Replication
   - [ ] Lesson 127 - S3 Replication Notes
   - [ ] Lesson 128 - S3 Replication Hands On
@@ -1053,3 +1053,6 @@
     - Can access if IAM permission allows it OR resource allows it AND not explicitly denied
   - static site:
     - `http://BUCKET-NAME.s3-website-AWS-REGION.amazonaws.com`
+- `Amazon S3 - Versioning`
+  - Enabled at bucket level
+  - version "null" for objects that existed prior to enabling versioning
