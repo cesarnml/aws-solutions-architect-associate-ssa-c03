@@ -12,6 +12,7 @@
     - [Section 07: High Availability and Scalability](#section-07-high-availability-and-scalability)
     - [Section 08: AWS Fundamentals: RDS + Aurora + ElastiCache](#section-08-aws-fundamentals-rds--aurora--elasticache)
     - [Section 09: Route 53](#section-09-route-53)
+    - [Section 10: Classic Solutions Architecture Discussions](#section-10-classic-solutions-architecture-discussions)
 
 ## Lessons
 
@@ -927,3 +928,58 @@
         - Expire with TTL
 
 ### Section 09: Route 53
+
+- `DNS` = Domain Name System
+  - translates human friendly hostnames into IP addresses
+- Domain Registrar => Where you buy a domain name
+- DNS Records
+  - A => IPv4
+  - AAAA => IPv6
+  - CNAME => hostname to hostname
+  - NS => Name Server => Resolves DNS queries (Top-Level Domain TLD `.com`, Second-Level Domain SLD - `amazon.com`)
+  - Root DNS Server (ICANN), TLD DNS Server (IANA), SLD DNS Server (managed by Domain Registrar)
+    - Authoritative vs Non-Authoritative
+  - `FQDN` = Fully Qualified Domain Name
+- `Amazon Route 53`
+  - HA, Scalable, fully managed, _authoritative_ DNS
+  - Also a Domain Registrar
+  - Ability to Health Check routes
+  - 100% SLA
+- `Domain Name Record`'
+  - Domain Name, Record Type, Value, Routing Policy, TTL (default 300 seconds)
+  - Record Types:
+    - A
+    - AAAA
+    - CNAME (NOT able to create for SLD - Zone Apex)
+    - NS
+  - `Hosted Zone`
+    - container for records (Public and Private)
+    - 50 cents/month per Hosted Zone
+  - `TTL` = Time To Live (60 sec to 24 hours) (Mandatory except for Alias Records)
+  - `Alias` record can point to SLD and comes with built-in health check
+    - Maps a hostname to an AWS Resource
+    - Automatically recognizes changes to resource's IP address
+    - Can point to Zone Apex
+    - Always of type A/AAAA
+    - Can't set TTL
+    - Targets:
+      - ELB, CloudFront Distributions, API Gateway, Elastic Beanstalk, S3 Websites, VPC InE, Global Accelerator, Route 53 records in same HZ
+      - _CAN NOT set an ALIAS for an EC2 DNS name_
+  - Routing Policies
+    - Simple (no health checks)
+    - Weighted
+      - DNS records must have same name and type
+    - Failover
+    - Latency based
+    - Geolocation
+    - Geoproximity (Route 53 Traffic Flow feature)
+    - Multi-Value Answer
+  - `Health Checks`
+    - _only_ for Public Resources
+    - Three Types:
+      - Health Checks that monitor an endpoint
+      - Calculated Health Checks
+      - Health Check that monitor a CloudWatch Alarm (can be used to monitor private resources)
+    - Integrated with CW metrics
+
+### Section 10: Classic Solutions Architecture Discussions
