@@ -115,27 +115,27 @@
   - [x] ~~_Lesson 090 - ElastiCache Overview_~~ [2024-01-18]
   - [x] ~~_Lesson 091 - ElastiCache Hands On_~~ [2024-01-18]
   - [x] ~~_Lesson 092 - ElastiCache for Solutions Architects_~~ [2024-01-18]
-- [ ] Section 09: Route 53 (1h 22min)
+- [x] ~~_Section 09: Route 53 (1h 22min)_~~ [2024-01-23]
   - [x] ~~_Lesson 093 - What is a DNS?_~~ [2024-01-19]
   - [x] ~~_Lesson 094 - Route 53 Overview_~~ [2024-01-19]
   - [x] ~~_Lesson 095 - Route 53 - Registering a domain_~~ [2024-01-19]
   - [x] ~~_Lesson 096 - Route 53 - Creating our first records_~~ [2024-01-19]
   - [x] ~~_Lesson 097 - Route 53 - EC2 Setup_~~ [2024-01-19]
-  - [ ] Lesson 098 - Route 53 - TTL
-  - [ ] Lesson 099 - Route 53 CNAME vs Alias
-  - [ ] Lesson 100 - Routing Policy - Simple
-  - [ ] Lesson 101 - Routing Policy - Weighted
-  - [ ] Lesson 102 - Routing Policy - Latency
-  - [ ] Lesson 103 - Route 53 - Health Checks
-  - [ ] Lesson 104 - Route 53 - Health Checks Hands On
-  - [ ] Lesson 105 - Routing Policy - Failover
-  - [ ] Lesson 106 - Routing Policy - Geolocation
-  - [ ] Lesson 107 - Routing Policy - Geoproximity
-  - [ ] Lesson 108 - Routing Policy - Multi Value
-  - [ ] Lesson 109 - 3rd Party Domains & Route 53
-  - [ ] Lesson 110 - Route 53 - Section Cleanup
-  - [ ] Lesson 111 - Solutions Architecture Discussion Overview
+  - [x] ~~_Lesson 098 - Route 53 - TTL_~~ [2024-01-23]
+  - [x] ~~_Lesson 099 - Route 53 CNAME vs Alias_~~ [2024-01-23]
+  - [x] ~~_Lesson 100 - Routing Policy - Simple_~~ [2024-01-23]
+  - [x] ~~_Lesson 101 - Routing Policy - Weighted_~~ [2024-01-23]
+  - [x] ~~_Lesson 102 - Routing Policy - Latency_~~ [2024-01-23]
+  - [x] ~~_Lesson 103 - Route 53 - Health Checks_~~ [2024-01-23]
+  - [x] ~~_Lesson 104 - Route 53 - Health Checks Hands On_~~ [2024-01-23]
+  - [x] ~~_Lesson 105 - Routing Policy - Failover_~~ [2024-01-23]
+  - [x] ~~_Lesson 106 - Routing Policy - Geolocation_~~ [2024-01-23]
+  - [x] ~~_Lesson 107 - Routing Policy - Geoproximity_~~ [2024-01-23]
+  - [x] ~~_Lesson 108 - Routing Policy - Multi Value_~~ [2024-01-23]
+  - [x] ~~_Lesson 109 - 3rd Party Domains & Route 53_~~ [2024-01-23]
+  - [x] ~~_Lesson 110 - Route 53 - Section Cleanup_~~ [2024-01-23]
 - [ ] Section 10: Classic Solutions Architecture Discussions (45min)
+  - [ ] Lesson 111 - Solutions Architecture Discussion Overview
   - [ ] Lesson 112 - WhatsTheTime.com
   - [ ] Lesson 113 - MyClothes.com
   - [ ] Lesson 114 - MyWordPress.com
