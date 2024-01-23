@@ -16,6 +16,7 @@
     - [Section 11: Amazon S3 Introduction](#section-11-amazon-s3-introduction)
     - [Section 12: Advanced Amazon S3](#section-12-advanced-amazon-s3)
     - [Section 13: Amazon S3 Security](#section-13-amazon-s3-security)
+    - [Section 13: Cloudfront \& AWS Global Accelerator](#section-13-cloudfront--aws-global-accelerator)
 
 ## Lessons
 
@@ -188,7 +189,7 @@
   - [x] ~~_Lesson 154 - Glacier Vault Lock & S3 Object Look_~~ [2024-01-23]
   - [x] ~~_Lesson 155 - S3 Access Points & Object Lambda_~~ [2024-01-23]
 - [ ] Section 14: Cloudfront & AWS Global Accelerator (35 min)
-  - [ ] Lesson 156 - CloudFront Overview
+  - [x] ~~_Lesson 156 - CloudFront Overview_~~ [2024-01-23]
   - [ ] Lesson 157 - CloudFront with S3 - Hands On
   - [ ] Lesson 158 - CloudFront - ALB as an Origin
   - [ ] Lesson 159 - CloudFront - Geo Restriction
@@ -1183,3 +1184,12 @@
   - AP Policy - 1:1 Manage Security at Scale
 - `S3 Object Lambda`
   - allows AWS Lambda Functions to change object before retrieved by caller
+
+### Section 13: Cloudfront & AWS Global Accelerator
+
+- `Cloudfront`
+  - Content Delivery Network - CDN
+  - Improves read performance, content is cached at the edge
+  - 216 Points of Presence
+  - DDoS protection, Integration with Shield, AWS Web Application Firewall
+  - Secured with `Origin Access Control` - OAC versus Origin Access Identity OAI
