@@ -1187,7 +1187,7 @@
 
 ### Section 13: Cloudfront & AWS Global Accelerator
 
-- `Cloudfront`
+- `AWS CloudFront`
   - Content Delivery Network - CDN
   - Improves read performance, content is cached at the edge
   - 216 Points of Presence
