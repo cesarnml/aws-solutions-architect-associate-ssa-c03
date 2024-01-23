@@ -15,6 +15,7 @@
     - [Section 10: Classic Solutions Architecture Discussions](#section-10-classic-solutions-architecture-discussions)
     - [Section 11: Amazon S3 Introduction](#section-11-amazon-s3-introduction)
     - [Section 12: Advanced Amazon S3](#section-12-advanced-amazon-s3)
+    - [Section 13: Amazon S3 Security](#section-13-amazon-s3-security)
 
 ## Lessons
 
@@ -173,9 +174,9 @@
   - [x] ~~_Lesson 141 - S3 Select & Glacier Select_~~ [2024-01-23]
   - [x] ~~_Lesson 142 - S3 Batch Operations_~~ [2024-01-23]
 - [ ] Section 13: Amazon S3 Security (52 min)
-  - [ ] Lesson 143 - S3 Encryption
-  - [ ] Lesson 144 - S3 Encryption Hands On
-  - [ ] Lesson 145 - S3 Default Encryption
+  - [x] ~~_Lesson 143 - S3 Encryption_~~ [2024-01-23]
+  - [x] ~~_Lesson 144 - S3 Encryption Hands On_~~ [2024-01-23]
+  - [x] ~~_Lesson 145 - S3 Default Encryption_~~ [2024-01-23]
   - [ ] Lesson 146 - S3 CORS
   - [ ] Lesson 147 - S3 CORDS Hands On
   - [ ] Lesson 148 - S3 MFA Delete
@@ -1126,3 +1127,29 @@
       - Optional parameters
     - Manages retries, tracks progress, sends completion notifications, generate reports
       - use `S3 Inventory` + `S3 Select` + `S3 Batch Operations`
+
+### Section 13: Amazon S3 Security
+
+- Object Encryption
+  - 4 Methods
+    - `Server-Side Encryption (SSE)`
+      - `Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3)`
+        - keys handled, managed, and owned by AWS
+        - Encrypted with `AES-256`
+        - Must set Header: `x-amz-server-side-encryption: AES256`
+        - Enabled by default for new buckets and new objects
+      - `Server-Side Encryption with KMS Keys stored in AWS KMS (SSE-KMS)`
+        - Leverage AWS Key Management Service (AWS KMS) to manage encryption keys
+        - Advantages: user control + audit key usage using CloudTrail
+        - Header: `x-amz-server-side-encryption: aws:kms`
+        - Upload => `GenerateDataKey` KMS API
+        - Download => `Decrypt` KMS API
+        - There is a quota on requests. Service Quotas Console to request increase
+      - `Server-Side Encryption with Customer-Provided Keys (SSE-C)`
+        - When you want to manage your own encryption keys
+        - S3 does NOT store key; key must be uploaded with HTTP headers using HTTPS
+    - `Client-Side Encryption`
+      - User responsible for encrypting data before sending
+        - Can use: `Amazon S3 Client-Side Encryption Library`
+        - Bucket Policies are handled before DEFAULT ENCRYPTION!!!
+      -
