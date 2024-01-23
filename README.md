@@ -14,6 +14,7 @@
     - [Section 09: Route 53](#section-09-route-53)
     - [Section 10: Classic Solutions Architecture Discussions](#section-10-classic-solutions-architecture-discussions)
     - [Section 11: Amazon S3 Introduction](#section-11-amazon-s3-introduction)
+    - [Section 12: Advanced Amazon S3](#section-12-advanced-amazon-s3)
 
 ## Lessons
 
@@ -162,15 +163,15 @@
 - [x] ~~_Lesson 132 - AWS Policy Simulator_~~ [2024-01-23]
 - [x] ~~_Lesson 133 - AWS EC2 Instance Metadata_~~ [2024-01-23]
 - [x] ~~_Lesson 134 - AWS SDK Overview_~~ [2024-01-23]
-- [ ] Section 12: Advanced Amazon S3 (26 min)
-  - [ ] Lesson 135 - S3 Lifecycle Rules (with S3 Analytics)
-  - [ ] Lesson 136 - S3 Lifecycle Rules Hands On
-  - [ ] Lesson 137 - S3 Requester Pays
-  - [ ] Lesson 138 - S3 Event Notifications
-  - [ ] Lesson 139 - S3 Event Notifications Hands On
-  - [ ] Lesson 140 - S3 Performance
-  - [ ] Lesson 141 - S3 Select & Glacier Select
-  - [ ] Lesson 142 - S3 Batch Operations
+- [x] ~~_Section 12: Advanced Amazon S3 (26 min)_~~ [2024-01-23]
+  - [x] ~~_Lesson 135 - S3 Lifecycle Rules (with S3 Analytics)_~~ [2024-01-23]
+  - [x] ~~_Lesson 136 - S3 Lifecycle Rules Hands On_~~ [2024-01-23]
+  - [x] ~~_Lesson 137 - S3 Requester Pays_~~ [2024-01-23]
+  - [x] ~~_Lesson 138 - S3 Event Notifications_~~ [2024-01-23]
+  - [x] ~~_Lesson 139 - S3 Event Notifications Hands On_~~ [2024-01-23]
+  - [x] ~~_Lesson 140 - S3 Performance_~~ [2024-01-23]
+  - [x] ~~_Lesson 141 - S3 Select & Glacier Select_~~ [2024-01-23]
+  - [x] ~~_Lesson 142 - S3 Batch Operations_~~ [2024-01-23]
 - [ ] Section 13: Amazon S3 Security (52 min)
   - [ ] Lesson 143 - S3 Encryption
   - [ ] Lesson 144 - S3 Encryption Hands On
@@ -663,6 +664,9 @@
     - Provisioned - throughput independent of size
   - Storage Tiers - Standard and Infrequent access (EFS Standard - EFS IA)
   - Availability - Standard: Multi-AZ or One Zone (EFS One Zone-IA)
+  - `EC2 Instance Metadata`
+    - `http://169.254.169.254/latest/meta-data`
+      - can retrieve `meta-data` and `user-data`
 
 ### Section 07: High Availability and Scalability
 
@@ -1079,3 +1083,46 @@
     - 180 days
   - Amazon S3 Intelligent Tiering
     - small monthly monitoring and auto-tiering fee, no retrieval charges
+
+### Section 12: Advanced Amazon S3
+
+- `Moving between Storage Classes`
+  - automated using `Lifecycle Rules`
+    - `Transition Actions`
+    - `Expiration Actions`
+- `S3 Analytics` gives recommendations for `Standard` and `Standard-IA` optimum config
+  - Report is updated daily; processing may take 24-48 hours
+- `S3 Requester Pays`
+  - Bucket owners pay for storage and data transfer costs
+  - The requester must be authenticated with AWS and they pay transaction cost
+- `S3 Event Notifications`
+  - use case: generate thumbnails of images uploaded to S3
+  - Can be processed by:
+    - SNS
+    - SQS
+    - Lambda Function
+    - Amazon EventBridge
+      - Advanced Filtering options, Multiple Destinations, EventBridge Capabilities
+- `S3 Performance`
+  - 100-200ms first byte
+  - 3,500 PUT/COPY/POST/DELETE and 5,500 GET/HEAD request/second/per-prefix
+  - `Multi-Part `uploads, recommended >100MB, required for >5GB
+  - `S3-Transfer Acceleration` -> transfer to edge for speed
+  - `S3 Byte-Range Fetches`
+    - Parallelize GETs by requesting specific byte ranges
+    - use case:
+      - speed up downloads, better resilience in case of failures
+      - retrieval only partial data (like the header of a file)
+  - `S3 Select and S3 Glacier Select`
+    - retrieve less data using SQL to perform `server-side filtering` (on CSV files)
+  - `S3 Batch Operations`
+    - Perform bulk operations on existing S3 objects
+      - modify object metadata
+      - copy objects between S3 buckets
+      - Encrypt un-encrypted objects
+    - Job:
+      - List of objects
+      - Action to perform
+      - Optional parameters
+    - Manages retries, tracks progress, sends completion notifications, generate reports
+      - use `S3 Inventory` + `S3 Select` + `S3 Batch Operations`
