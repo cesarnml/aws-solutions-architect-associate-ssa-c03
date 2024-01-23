@@ -177,10 +177,10 @@
   - [x] ~~_Lesson 143 - S3 Encryption_~~ [2024-01-23]
   - [x] ~~_Lesson 144 - S3 Encryption Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 145 - S3 Default Encryption_~~ [2024-01-23]
-  - [ ] Lesson 146 - S3 CORS
-  - [ ] Lesson 147 - S3 CORDS Hands On
-  - [ ] Lesson 148 - S3 MFA Delete
-  - [ ] Lesson 149 - S3 MFA Delete Hands On
+  - [x] ~~_Lesson 146 - S3 CORS_~~ [2024-01-23]
+  - [x] ~~_Lesson 147 - S3 CORDS Hands On_~~ [2024-01-23]
+  - [x] ~~_Lesson 148 - S3 MFA Delete_~~ [2024-01-23]
+  - [x] ~~_Lesson 149 - S3 MFA Delete Hands On_~~ [2024-01-23]
   - [ ] Lesson 150 - S3 Access Logs
   - [ ] Lesson 151 - S3 Access Logs Hands On
   - [ ] Lesson 152 - S3 Pre-signed URLs
@@ -1152,4 +1152,9 @@
       - User responsible for encrypting data before sending
         - Can use: `Amazon S3 Client-Side Encryption Library`
         - Bucket Policies are handled before DEFAULT ENCRYPTION!!!
-      -
+- `Cross-Origin Resource Sharing (CORS)`
+  - `Origin = scheme + host + port`
+  - By default, Web Browsers deny cross-origin requests
+  - Destination but allow requests, CORS HEADERS `Access-Control-Allow-Origin`, `Access-Control-Allow-Methods`
+- `Amazon S3 - MFA Delete`
+  - Required: Permanently delete an object, or disable Versioning. Only bucket owner and root account can disable MFA delete
