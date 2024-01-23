@@ -136,9 +136,9 @@
   - [x] ~~_Lesson 109 - 3rd Party Domains & Route 53_~~ [2024-01-23]
   - [x] ~~_Lesson 110 - Route 53 - Section Cleanup_~~ [2024-01-23]
 - [ ] Section 10: Classic Solutions Architecture Discussions (45min)
-  - [ ] Lesson 111 - Solutions Architecture Discussion Overview
-  - [ ] Lesson 112 - WhatsTheTime.com
-  - [ ] Lesson 113 - MyClothes.com
+  - [x] ~~_Lesson 111 - Solutions Architecture Discussion Overview_~~ [2024-01-23]
+  - [x] ~~_Lesson 112 - WhatsTheTime.com_~~ [2024-01-23]
+  - [x] ~~_Lesson 113 - MyClothes.com_~~ [2024-01-23]
   - [ ] Lesson 114 - MyWordPress.com
   - [ ] Lesson 115 - Instantiating application quickly
   - [ ] Lesson 116 - Beanstalk Overview
@@ -888,7 +888,7 @@
   - `Enforce IAM Authentication for DB, securely store credentials in AWS Secrets Manager`
   - **NEVER Publicly accessible; must connect within VPC**
   - Hella useful for Lambda function access to RDS/Aurora
-- Amazon ElastiCache
+- `Amazon ElastiCache`
   - managed Redis or Memcached service
   - in-memory databases HP and Low Latency
   - Help reduce load on DB for common read queries
@@ -983,3 +983,23 @@
     - Integrated with CW metrics
 
 ### Section 10: Classic Solutions Architecture Discussions
+
+- `whatisthetime.com`
+  - Route 53 + Elastic IP + EC2 Instance (stateless)
+  - to
+  - Route 53 (Alias) + MultiAZ ELB + MultiAZ ASG + EC2 instances + Reserve Instances
+  - Well Architected Framework (COST, PERFORMANCE, RELIABILITY, SECURITY, OPERATIONAL EXCELLENCE)
+- `myclothes.com`
+  - stateful web app
+  - shopping cart
+    - Session Affinity (ELB Setting)
+    - Browser Cookies (User)
+      - stateless
+      - Heaving HTTP requests
+      - Security Risk (cookies are mutable)
+      - Must validate cookies, 4KB limit
+    - ElastiCache - sub-millisecond (via sessionId) or DynamoDB
+  - Scale reads with RDS RR (up to 5) or implement `write-through` via ElastiCache (cache validation)
+  - Multi-AZ for Disaster Recovery
+  - Example of 3-Tier Architecture
+- ## `mywordpress.com`
