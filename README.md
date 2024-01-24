@@ -1218,4 +1218,3 @@
 - CloudFront vs Global Accelerator
   - Improves TCP/UDP app performance via proxying packets
   - Good for HTTP use cases that require static IP or fast failover
-    x
