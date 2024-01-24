@@ -191,7 +191,7 @@
 - [ ] Section 14: Cloudfront & AWS Global Accelerator (35 min)
   - [x] ~~_Lesson 156 - CloudFront Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 157 - CloudFront with S3 - Hands On_~~ [2024-01-24]
-  - [ ] Lesson 158 - CloudFront - ALB as an Origin
+  - [x] ~~_Lesson 158 - CloudFront - ALB as an Origin_~~ [2024-01-24]
   - [ ] Lesson 159 - CloudFront - Geo Restriction
   - [ ] Lesson 160 - CloudFront - Price Classes
   - [ ] Lesson 161 - CloudFront - Cache Invalidation
@@ -1193,3 +1193,6 @@
   - 216 Points of Presence
   - DDoS protection, Integration with Shield, AWS Web Application Firewall
   - Secured with `Origin Access Control` - OAC versus Origin Access Identity OAI
+- `CloudFront with ALB or EC2 as Origin`
+  - ALB/EC2 Instances must be _Public_
+    - Allow **Public IP of Edge Locations**
