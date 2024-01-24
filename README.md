@@ -16,7 +16,8 @@
     - [Section 11: Amazon S3 Introduction](#section-11-amazon-s3-introduction)
     - [Section 12: Advanced Amazon S3](#section-12-advanced-amazon-s3)
     - [Section 13: Amazon S3 Security](#section-13-amazon-s3-security)
-    - [Section 13: Cloudfront \& AWS Global Accelerator](#section-13-cloudfront--aws-global-accelerator)
+    - [Section 14: Cloudfront \& AWS Global Accelerator](#section-14-cloudfront--aws-global-accelerator)
+    - [Section 15: AWS Storage Extras](#section-15-aws-storage-extras)
 
 ## Lessons
 
@@ -1185,7 +1186,7 @@
 - `S3 Object Lambda`
   - allows AWS Lambda Functions to change object before retrieved by caller
 
-### Section 13: Cloudfront & AWS Global Accelerator
+### Section 14: Cloudfront & AWS Global Accelerator
 
 - `AWS CloudFront`
   - Content Delivery Network - CDN
@@ -1218,3 +1219,7 @@
 - CloudFront vs Global Accelerator
   - Improves TCP/UDP app performance via proxying packets
   - Good for HTTP use cases that require static IP or fast failover
+
+### Section 15: AWS Storage Extras
+
+- `AWS Snow Family`
