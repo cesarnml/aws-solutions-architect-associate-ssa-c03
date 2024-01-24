@@ -190,7 +190,7 @@
   - [x] ~~_Lesson 155 - S3 Access Points & Object Lambda_~~ [2024-01-23]
 - [ ] Section 14: Cloudfront & AWS Global Accelerator (35 min)
   - [x] ~~_Lesson 156 - CloudFront Overview_~~ [2024-01-23]
-  - [ ] Lesson 157 - CloudFront with S3 - Hands On
+  - [x] ~~_Lesson 157 - CloudFront with S3 - Hands On_~~ [2024-01-24]
   - [ ] Lesson 158 - CloudFront - ALB as an Origin
   - [ ] Lesson 159 - CloudFront - Geo Restriction
   - [ ] Lesson 160 - CloudFront - Price Classes
