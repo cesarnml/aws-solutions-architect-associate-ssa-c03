@@ -188,15 +188,15 @@
   - [x] ~~_Lesson 153 - S3 Pre-signed URLs Hands On_~~ [2024-01-23]
   - [x] ~~_Lesson 154 - Glacier Vault Lock & S3 Object Look_~~ [2024-01-23]
   - [x] ~~_Lesson 155 - S3 Access Points & Object Lambda_~~ [2024-01-23]
-- [ ] Section 14: Cloudfront & AWS Global Accelerator (35 min)
+- [x] ~~_Section 14: Cloudfront & AWS Global Accelerator (35 min)_~~ [2024-01-24]
   - [x] ~~_Lesson 156 - CloudFront Overview_~~ [2024-01-23]
   - [x] ~~_Lesson 157 - CloudFront with S3 - Hands On_~~ [2024-01-24]
   - [x] ~~_Lesson 158 - CloudFront - ALB as an Origin_~~ [2024-01-24]
-  - [ ] Lesson 159 - CloudFront - Geo Restriction
-  - [ ] Lesson 160 - CloudFront - Price Classes
-  - [ ] Lesson 161 - CloudFront - Cache Invalidation
-  - [ ] Lesson 162 - AWS Global Accelerator Overview
-  - [ ] Lesson 163 - AWS Global Accelerator Hands On
+  - [x] ~~_Lesson 159 - CloudFront - Geo Restriction_~~ [2024-01-24]
+  - [x] ~~_Lesson 160 - CloudFront - Price Classes_~~ [2024-01-24]
+  - [x] ~~_Lesson 161 - CloudFront - Cache Invalidation_~~ [2024-01-24]
+  - [x] ~~_Lesson 162 - AWS Global Accelerator Overview_~~ [2024-01-24]
+  - [x] ~~_Lesson 163 - AWS Global Accelerator Hands On_~~ [2024-01-24]
 - [ ] Section 15: AWS Storage Extras (49min)
   - [ ] Lesson 164 - AWS Snow Family Overview
   - [ ] Lesson 165 - AWS Snow Family Hands On
@@ -1193,6 +1193,29 @@
   - 216 Points of Presence
   - DDoS protection, Integration with Shield, AWS Web Application Firewall
   - Secured with `Origin Access Control` - OAC versus Origin Access Identity OAI
-- `CloudFront with ALB or EC2 as Origin`
-  - ALB/EC2 Instances must be _Public_
-    - Allow **Public IP of Edge Locations**
+  - `CloudFront with ALB or EC2 as Origin`
+    - ALB/EC2 Instances must be _Public_
+      - Allow **Public IP of Edge Locations**
+  - `CloudFront Geo Restriction`
+    - Can restrict access to distribution
+    - `Allowlist` or `Blocklist` - approved/banned countries
+  - `Pricing`
+    - Cost varies by location
+  - `Price Classes`
+    - Price Class All: all regions - best performance
+    - Price Class 200: most regions, except pricey
+    - Price Class 100: NA/Europe/Israel
+  - `Cache Invalidation`
+- `AWS Global Accelerator`
+  - uses `Anycast IP` instead of `Unicast IP` - client routed to nearest server
+  - route clients to closest Edge location via the internal AWS private network
+  - Uses _2 Anycast IP_
+  - Works with:
+    - Elastic IP
+    - EC2 Instances
+    - ALB, NLB (public or private)
+  - Health Checks built in (less than 1 min failover)
+- CloudFront vs Global Accelerator
+  - Improves TCP/UDP app performance via proxying packets
+  - Good for HTTP use cases that require static IP or fast failover
+    x
