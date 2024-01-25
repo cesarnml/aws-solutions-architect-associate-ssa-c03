@@ -1243,4 +1243,15 @@
 - All can run EC2 Instances, AWS Lambda via AWS IoT Greengrass
 - Rule of thumb: _use snowball devices if >1 week to transfer_
 - `AWS OpsHub` GUI for controlling snow family devices
-- Snowball -> S3 -> Lifecycle -> S3 Glacier
+  -Snowball -> S3 -> Lifecycle -> S3 Glacier
+- `Amazon FSx`
+  - Launch 3rd party HP FS on AWS
+  - Fully managed
+    - `FSx for Windows File Server`
+      - fully managed Windows FS `shared drive`
+      - Supports SMB protocol and Windows NTFS
+      - Integration with Microsoft AD, ACLs, and user quotas
+      - _Can be mounted on Linux EC2 instances_
+    - `FSx for Lustre`
+    - `FSx for NetApp ONTAP`
+    - `FSx for OpenZFS`
