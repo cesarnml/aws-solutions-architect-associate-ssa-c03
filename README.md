@@ -201,7 +201,7 @@
 - [ ] Section 15: AWS Storage Extras (49min)
   - [x] ~~_Lesson 164 - AWS Snow Family Overview_~~ [2024-01-25]
   - [x] ~~_Lesson 165 - AWS Snow Family Hands On_~~ [2024-01-25]
-  - [ ] Lesson 166 - Architecture: Snowball into Glacier
+  - [x] ~~_Lesson 166 - Architecture: Snowball into Glacier_~~ [2024-01-25]
   - [ ] Lesson 167 - Amazon FSx
   - [ ] Lesson 168 - Amazon FSx Hands On
   - [ ] Lesson 169 - Storage Gateway Overview
@@ -1243,3 +1243,4 @@
 - All can run EC2 Instances, AWS Lambda via AWS IoT Greengrass
 - Rule of thumb: _use snowball devices if >1 week to transfer_
 - `AWS OpsHub` GUI for controlling snow family devices
+- Snowball -> S3 -> Lifecycle -> S3 Glacier
