@@ -199,8 +199,8 @@
   - [x] ~~_Lesson 162 - AWS Global Accelerator Overview_~~ [2024-01-24]
   - [x] ~~_Lesson 163 - AWS Global Accelerator Hands On_~~ [2024-01-24]
 - [ ] Section 15: AWS Storage Extras (49min)
-  - [ ] Lesson 164 - AWS Snow Family Overview
-  - [ ] Lesson 165 - AWS Snow Family Hands On
+  - [x] ~~_Lesson 164 - AWS Snow Family Overview_~~ [2024-01-25]
+  - [x] ~~_Lesson 165 - AWS Snow Family Hands On_~~ [2024-01-25]
   - [ ] Lesson 166 - Architecture: Snowball into Glacier
   - [ ] Lesson 167 - Amazon FSx
   - [ ] Lesson 168 - Amazon FSx Hands On
@@ -1223,3 +1223,23 @@
 ### Section 15: AWS Storage Extras
 
 - `AWS Snow Family`
+  - Data Migration
+    - Snowcone
+      - 8TB Storage, up to 24TB
+      - Can use `AWS DataSync` to send data via www
+    - Snowball Edge
+      - `Storage Optimized`
+        - 80TB of HDD
+        - Can cluster ... up to 15 snowballs
+      - `Compute Optimized`
+        - 42TB of HDD
+    - Snowmobile
+      - `1 Exabyte = 1000 PB` transfers
+      - Each mobile has `100PB`
+      - **Better than Snowball if >10PB**
+  - Edge Computing
+    - Snowcone
+    - Snowball Edge
+- All can run EC2 Instances, AWS Lambda via AWS IoT Greengrass
+- Rule of thumb: _use snowball devices if >1 week to transfer_
+- `AWS OpsHub` GUI for controlling snow family devices
