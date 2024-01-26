@@ -18,6 +18,7 @@
     - [Section 13: Amazon S3 Security](#section-13-amazon-s3-security)
     - [Section 14: Cloudfront \& AWS Global Accelerator](#section-14-cloudfront--aws-global-accelerator)
     - [Section 15: AWS Storage Extras](#section-15-aws-storage-extras)
+    - [Section 16: Decoupling Applications: SQS, SNS, Kinesis, Active MQ](#section-16-decoupling-applications-sqs-sns-kinesis-active-mq)
 
 ## Lessons
 
@@ -1255,3 +1256,8 @@
     - `FSx for Lustre`
     - `FSx for NetApp ONTAP`
     - `FSx for OpenZFS`
+
+### Section 16: Decoupling Applications: SQS, SNS, Kinesis, Active MQ
+
+- `SQS - Simple Queueing Service`
+- `SNS - Simple Notification Service`
