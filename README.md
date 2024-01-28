@@ -199,17 +199,17 @@
   - [x] ~~_Lesson 161 - CloudFront - Cache Invalidation_~~ [2024-01-24]
   - [x] ~~_Lesson 162 - AWS Global Accelerator Overview_~~ [2024-01-24]
   - [x] ~~_Lesson 163 - AWS Global Accelerator Hands On_~~ [2024-01-24]
-- [ ] Section 15: AWS Storage Extras (49min)
+- [x] ~~_Section 15: AWS Storage Extras (49min)_~~ [2024-01-28]
   - [x] ~~_Lesson 164 - AWS Snow Family Overview_~~ [2024-01-25]
   - [x] ~~_Lesson 165 - AWS Snow Family Hands On_~~ [2024-01-25]
   - [x] ~~_Lesson 166 - Architecture: Snowball into Glacier_~~ [2024-01-25]
-  - [ ] Lesson 167 - Amazon FSx
-  - [ ] Lesson 168 - Amazon FSx Hands On
-  - [ ] Lesson 169 - Storage Gateway Overview
-  - [ ] Lesson 170 - Storage Gateway Hands On
-  - [ ] Lesson 171 - AWS Transfer Family
-  - [ ] Lesson 172 - DataSync Overview
-  - [ ] Lesson 173 - All AWS Storage Options Compared
+  - [x] ~~_Lesson 167 - Amazon FSx_~~ [2024-01-27]
+  - [x] ~~_Lesson 168 - Amazon FSx Hands On_~~ [2024-01-27]
+  - [x] ~~_Lesson 169 - Storage Gateway Overview_~~ [2024-01-28]
+  - [x] ~~_Lesson 170 - Storage Gateway Hands On_~~ [2024-01-28]
+  - [x] ~~_Lesson 171 - AWS Transfer Family_~~ [2024-01-28]
+  - [x] ~~_Lesson 172 - DataSync Overview_~~ [2024-01-28]
+  - [x] ~~_Lesson 173 - All AWS Storage Options Compared_~~ [2024-01-28]
 - [ ] Section 16: Decoupling applications: SQS, SNS, Kinesis, Active MQ (1h 32min)
   - [ ] Lesson 174 - Introduction to Messaging
   - [ ] Lesson 175 - Amazon SQS Standard Queues Overview
@@ -1253,9 +1253,80 @@
       - Supports SMB protocol and Windows NTFS
       - Integration with Microsoft AD, ACLs, and user quotas
       - _Can be mounted on Linux EC2 instances_
-    - `FSx for Lustre`
+      - Supports `Microsoft's Distributed File System (DFS) Namespaces` - link on-premise Windows FS to Cloud
+    - Storage Options:
+      - SSD
+      - HDD
+    - Can access Windows FSx from on-premise with VPN or Direct Connect
+    - Can be MultiAZ; Data backed up daily to S3 for DR
+    - `FSx for Lustre` = Linux + cluster
+      - Parallel distributed FS for `large-scale computing`
+      - Machine Learning + HPC (High Performance Computing)
+      - Seamless integration with S3. Can "read" as FS through FSx and write
+      - Can be used from on-premise via (VPN or Direct Connect)
+      - Scratch File System
+      - Persistent File System (replication within single AZ)
     - `FSx for NetApp ONTAP`
+      - NFS, SMB, iSCSI
+      - Broad compatibility (Workspaces, VWWare Cloud on AWS, AppStream 2.0)
+      - Storage auto-shrinks or grows
+      - snapshots
+      - replication
+      - data compression and de-duplication
+      - Point-in-time instantaneous cloning (helpful for testing new workloads)
     - `FSx for OpenZFS`
+      - compatible with NFS
+      - Broad compatibility
+      - point-in-time instantaneous cloning
+      - `Up to 1 million iops, sub ms latency`
+      - Snapshots and compression, low cost
+- `AWS Storage Gateway` - bridge between on-premise and cloud data
+  - `Block Storage`
+    - EBS
+    - EC2 Instance Store
+  - `File Storage`
+    - EFS
+    - FSx
+  - `Object Storage`
+    - S3
+    - Amazon Glacier
+  - Use Cases:
+    - DR
+    - backup & restore
+  - Types:
+    - `S3 File Gateway`
+      - NFS or SMB ... behind the scenes uses HTTPS
+      - Most recent used files cached in file gateway
+      - SMB allows for AD for user auth
+    - `FSx File Gateway`
+      - Native access to Amazon FSx for Windows File Server
+      - Advantage is the local cache
+      - Good for group file shares and home dirs
+    - `Volume Gateway`
+      - block storage uses iSCSI backed by S3
+      - Backed by EBS to restore on-premises volumes
+      - `Cache volumes` - low lat
+      - `Stored volumes` - all dataset is on premise, for backup
+      - mainly for backup and restore
+    - `Tape Gateway`
+      - for physical tape backups in the cloud
+      - S3 or Glacier
+      - also can use iSCSI
+    - `Storage Gateway - Hardware Appliance`
+      - If you can virtual the gateway
+- `AWS Transfer Family`
+  - uses `FTP, FTPS, SFTP`
+  - can transfer to S3 or EFS
+  - Can used Microsoft AD, LDAP, Okta, Amazon Cognito for authentication
+- `AWS DataSync`
+  - Move large amount of data to/from
+  - On-premise to cloud and vice versa ... `needs an agent`
+  - AWS to AWS (no agent)
+  - Replication task is not sync; it is scheduled: hourly, daily, weekly...
+  - **File permissions and metadata are preserved (NFS POSIX, SMB)**
+  - Can sync with ALL S3 (including glacier), EFX or FSx
+- Summary:
+  - EC2 Instance storage: physical storage with high IOPS!!!
 
 ### Section 16: Decoupling Applications: SQS, SNS, Kinesis, Active MQ
 
