@@ -211,7 +211,7 @@
   - [x] ~~_Lesson 172 - DataSync Overview_~~ [2024-01-28]
   - [x] ~~_Lesson 173 - All AWS Storage Options Compared_~~ [2024-01-28]
 - [ ] Section 16: Decoupling applications: SQS, SNS, Kinesis, Active MQ (1h 32min)
-  - [ ] Lesson 174 - Introduction to Messaging
+  - [x] ~~_Lesson 174 - Introduction to Messaging_~~ [2024-01-28]
   - [ ] Lesson 175 - Amazon SQS Standard Queues Overview
   - [ ] Lesson 176 - SQS - Standard Queue Hands On
   - [ ] Lesson 177 - SQS - Message Visibility Timeout
@@ -1330,5 +1330,6 @@
 
 ### Section 16: Decoupling Applications: SQS, SNS, Kinesis, Active MQ
 
+- Sync communications vs Async communication between services
 - `SQS - Simple Queueing Service`
 - `SNS - Simple Notification Service`
