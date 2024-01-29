@@ -1325,6 +1325,7 @@
   - Replication task is not sync; it is scheduled: hourly, daily, weekly...
   - **File permissions and metadata are preserved (NFS POSIX, SMB)**
   - Can sync with ALL S3 (including glacier), EFX or FSx
+    console.log('including:', including)
 - Summary:
   - EC2 Instance storage: physical storage with high IOPS!!!
 
