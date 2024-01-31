@@ -1333,5 +1333,6 @@
 
 - Sync communications vs Async communication between services
 - `SQS - Simple Queueing Service`
+  -
 - `SNS - Simple Notification Service`
 - `Kinesis`
