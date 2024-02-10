@@ -1347,4 +1347,3 @@
   - pub/sub model
 - `Kinesis`
   - real-time streaming model
-    k
