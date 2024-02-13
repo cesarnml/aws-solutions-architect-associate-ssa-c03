@@ -1321,7 +1321,7 @@
 - `AWS DataSync`
   - Move large amount of data to/from
   - On-premise to cloud and vice versa ... `needs an agent`
-  - AWS to AWS (no agent)
+  - AWS to AWS ( o agent)
   - Replication task is not sync; it is scheduled: hourly, daily, weekly...
   - **File permissions and metadata are preserved (NFS POSIX, SMB)**
   - Can sync with ALL S3 (including glacier), EFX or FSx
@@ -1346,4 +1346,4 @@
 - `SNS - Simple Notification Service`
   - pub/sub model
 - `Kinesis`
-  - real-time streamin
+  - real-time streaming
