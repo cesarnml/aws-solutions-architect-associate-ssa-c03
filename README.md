@@ -1346,4 +1346,3 @@
 - `SNS - Simple Notification Service`
   - pub/sub model
 - `Kinesis`
-  - real-time streaming
