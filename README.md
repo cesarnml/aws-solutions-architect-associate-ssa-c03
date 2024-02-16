@@ -1331,18 +1331,23 @@
 
 ### Section 16: Decoupling Applications: SQS, SNS, Kinesis, Active MQ
 
-- Sync communications vs Async communication between services
-- `SQS - Simple Queueing Service`
+- Sync communications vs Async/Event-Based communication between services
+- `SQS - Simple Queueing Service` - Queue Model
   - queue model: queue/messages/poll/long polling/Producers/Consumers
   - used to decouple applications
   - retention time: 4 days, max 14 days
   - low latency (<10ms)
   - 256KB message limit
-  - At least once delivery, "best effort ordering" by default
-    - `SendMessage` API, message persisted until Consumer deletes it
+  - **At least once delivery**, _"best effort ordering"_ by default
+    - `SendMessage` API, message persisted until Consumer deletes message
   - unlimited throughput (in standard configuration)
-  - Polling up to 10 messages at a time. `DeleteMessage` API, `ReceiveMessages`
-  - Scale using ASG and CloudWatch Metric (`ApproximateNumberOfMessages`) -> setup a `CloudWatch Alarm`
-- `SNS - Simple Notification Service`
+  - Polling up to `10 messages at a time`. `DeleteMessage` API, `ReceiveMessages`
+  - Scale Consumers using ASG and `CloudWatch Metric` (`ApproximateNumberOfMessages`) -> setup a `CloudWatch Alarm`
+  - Security:
+    - in-flight with HTTPS API, at rest with KMS keys, or client-side encryption
+    - Access Controls via IAM policies or SQS Access Policies (cross-account)
+  - Messages become `invisible` to other consumers once polled - set _message visibility timeout_ - default 30 seconds --- must be processed and deleted by Consumer or message will return to the queue
+    - `ChangeMessageVisibility` API can give a Consumer more time to process
+- `SNS - Simple Notification Service` - Pub/Sub model
   - pub/sub model
-- `Kinesis`
+- `Kinesis` - Real-Time Streaming model
