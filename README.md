@@ -212,7 +212,7 @@
   - [x] ~~_Lesson 173 - All AWS Storage Options Compared_~~ [2024-01-28]
 - [ ] Section 16: Decoupling applications: SQS, SNS, Kinesis, Active MQ (1h 32min)
   - [x] ~~_Lesson 174 - Introduction to Messaging_~~ [2024-01-28]
-  - [ ] Lesson 175 - Amazon SQS Standard Queues Overview
+  - [x] ~~_Lesson 175 - Amazon SQS Standard Queues Overview_~~ [2024-02-20]
   - [ ] Lesson 176 - SQS - Standard Queue Hands On
   - [ ] Lesson 177 - SQS - Message Visibility Timeout
   - [ ] Lesson 178 - SQS - Long Polling
