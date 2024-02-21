@@ -1350,4 +1350,4 @@
     - `ChangeMessageVisibility` API can give a Consumer more time to process
 - `SNS - Simple Notification Service` - Pub/Sub model
   - pub/sub model
-- `Kinesis` - Real-Time Streaming mode
+- `Kinesis` - Real-Time Streaming model
